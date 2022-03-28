@@ -3,7 +3,7 @@ FROM alpine:latest AS build
 RUN apk update && \
     apk add make g++ jpeg-dev blas-dev blas openblas openblas-dev python3 py3-pip libxml2-dev libxslt-dev gcc libxml2 python3-dev linux-headers musl-dev  && \
     apk add py3-matplotlib py3-wheel py3-numpy py3-scipy py3-pandas && \
-    pip3 install pyshark seaborn plotly && \
+    pip3 install pyshark seaborn && \
     mkdir -p /data/appdata
 
 
@@ -35,8 +35,9 @@ COPY --from=build /usr/lib/libxcb.so.1 /usr/lib/
 COPY --from=build /usr/lib/libXau.so.6 /usr/lib/
 COPY --from=build /usr/lib/libXdmcp.so.6 /usr/lib/
 COPY --from=build /usr/lib/libbsd.so.0 /usr/lib/
-COPY *.py *.sh /data/appdata/
+COPY *.py *.sh *.html /data/appdata/
+RUN addgroup root wireshark
 
 EXPOSE 8080
 
-CMD ['/bin/sh','/data/appdata/start.sh']
+CMD ["/bin/sh","/data/appdata/start.sh"]
