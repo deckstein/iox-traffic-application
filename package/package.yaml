@@ -1,0 +1,25 @@
+descriptor-schema-version: "2.2"
+info:
+  name: iox-traffic
+  version: "0.1"
+app:
+  cpuarch: "x86_64"
+  env:
+    PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  resources:
+    cpu: 1000
+    memory: 600
+    disk: 100
+    network:
+    - interface-name: eth0
+      ports:
+        tcp:
+        - "8080"
+    profile: custom
+  startup:
+    rootfs: ioxapp.tar
+    target:
+    - /bin/sh
+    - -c
+    - /start.sh
+  type: docker

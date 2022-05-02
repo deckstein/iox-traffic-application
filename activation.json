@@ -1,0 +1,16 @@
+{
+    "resources": {
+        "profile": "exclusive",
+        "disk": "100",
+        "network": [{
+            "interface-name": "eth0",
+            "network-name": "iox-nat0",
+            "port_map": {
+                "mode": "auto",
+                "tcp": {
+                    "8080": "8080"
+                }
+            }
+        }]
+    }
+}

@@ -1,10 +1,11 @@
-import pyshark
 import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib
 import pandas as pd
 import time
+import io
 import sys
+import subprocess as sub
 from matplotlib.ticker import FormatStrFormatter
 
 font = {'family' : 'normal',
@@ -13,11 +14,10 @@ font = {'family' : 'normal',
 
 matplotlib.rc('font', **font)
 
-myIP = sys.argv[2]
-cap = pyshark.LiveCapture(interface=sys.argv[1], bpf_filter='icmp or tcp or udp')
+myIP = sys.argv[1]
 
 traffic = pd.DataFrame(columns=[
-    'timestamp','protocol','type','src-ip','src-port',
+    'timestamp','protocol','type','src-ip',
     'dst-ip','dst-port','query-name','response-name'])
 
 def createVisuals(traffic,myIP):
@@ -37,7 +37,7 @@ def createVisuals(traffic,myIP):
         order = traffic['query-name'].value_counts().index,ax=ax_bl).set_title('Number of DNS Requests per Domain')
     ax_bl.set_ylabel('')    
     ax_bl.set_xlabel('')
-    ax_bl.tick_params(labelrotation=45)
+    ax_bl.tick_params(labelrotation=90)
 
     sns.countplot(
         x="response-name",
@@ -45,38 +45,52 @@ def createVisuals(traffic,myIP):
         order = traffic['response-name'].value_counts().index,ax=ax_bc).set_title('Number of DNS Responses per Domain')
     ax_bc.set_ylabel('')    
     ax_bc.set_xlabel('')
-    ax_bc.tick_params(labelrotation=45)
+    ax_bc.tick_params(labelrotation=90)
 
     sns.countplot(x="protocol",data=traffic,ax=ax_br).set_title('Packages per Protocol')
     ax_br.set_ylabel('')    
     ax_br.set_xlabel('')
 
     plt.subplots_adjust(bottom=0.15)
-    plt.savefig('stats.png')
+    plt.savefig('stats.png',bbox_inches="tight")
 
 def network_conversation(packet,traffic,myIP):
-    type = source_address = source_port = destination_address = destination_port = protocol =None
-    if(len(traffic) > 700):
+    type = source_address = source_port = destination_address = destination_port = protocol = None
+    if(len(traffic) > 50):
         #traffic.to_pickle("./apptraffic.pkl")
-        print("traffic grew too big, truncating")
+        #print("traffic grew too big, truncating")
         createVisuals(traffic,myIP)
-        traffic = traffic[350:]
-    if(hasattr(packet,'http')):
-        type = "HTTP"    
-    if(hasattr(packet,'transport_layer')):
-        protocol = packet.transport_layer
-    if(hasattr(packet,'icmp')):
+        traffic = traffic[-30:]
+
+    packet = packet.rstrip()
+    packetSplit = packet.split(' ')
+    source_address = ".".join(packetSplit[2].split('.')[:4])
+    source_port = packetSplit[2].split('.')[-1].split(":")[0]
+    destination_address = ".".join(packetSplit[4].split('.')[:4])
+    destination_port = packetSplit[4].split('.')[-1].split(":")[0]
+    query_name = None
+    response_name = None
+
+    if('ICMP echo' in packet):
         protocol = 'ICMP'
-    if(hasattr(packet,'ip')):
-        if(hasattr(packet.ip,'src')):
-            source_address = packet.ip.src
-        if(hasattr(packet.ip,'dst')):
-            destination_address = packet.ip.dst
-    if(hasattr(packet,str(protocol))):
-        if(hasattr(packet.protocol,'srcport')):
-            source_port = packet[protocol].srcport
-        if(hasattr(packet.protocol,'dstport')):
-            destination_port = packet[protocol].dstport        
+        type = 'Ping'
+        destination_port = None
+        source_port = None
+        #print("ping from source: "+source_address+", to dest: "+destination_address)
+    elif('Flags' in packet):
+        protocol = 'HTTP'
+        type = 'Web-Request'
+        #print("web request from source: "+source_address+", source port: "+source_port+" to destination: "+destination_address+" on port: "+destination_port)
+    else:
+        if(int(destination_port) == 53):
+            protocol = 'DNS'
+            type = 'DNS-Request'
+            query_name = packetSplit[7][:-1]
+        if(int(source_port) == 53):
+            protocol = 'DNS'
+            type = 'DNS-Request'
+            response_name = packetSplit[8][:-1]
+
     traffic = traffic.append({
         'timestamp': time.time(),
         'protocol': protocol,
@@ -85,38 +99,12 @@ def network_conversation(packet,traffic,myIP):
         'src-port': source_port,
         'dst-ip': destination_address,
         'dst-port': destination_port,
-        'query-name': None,
-        'response-name': None
+        'query-name': query_name,
+        'response-name': response_name
     },ignore_index=True)
-
-    if(hasattr(packet,'dns')):
-        if(hasattr(packet.dns,'qry_name')):
-            traffic = traffic.append({
-                'timestamp': time.time(),
-                'protocol': protocol,
-                'type': 'DNS-Query',
-                'src-ip': source_address,
-                'src-port': None,
-                'dst-ip': destination_address,
-                'dst-port': None,
-                'query-name': packet.dns.qry_name,
-                'response-name': None
-            },ignore_index=True)
-    if(hasattr(packet,'dns')):
-        if(hasattr(packet.dns,'resp_name')):
-            traffic = traffic.append({
-                'timestamp': time.time(),
-                'protocol': protocol,
-                'type': 'DNS-Response',
-                'src-ip': source_address,
-                'src-port': None,
-                'dst-ip': destination_address,
-                'dst-port': None,
-                'query-name': None,
-                'response-name': packet.dns.resp_name
-            },ignore_index=True)
     return traffic
 
 while(1):
-    for packet in cap.sniff_continuously(packet_count=350):
+    p = sub.Popen(('tcpdump', '-n', '-s', '0', '-i', 'eth0', 'tcp', 'dst', 'port', '443', 'or', 'icmp', 'or', 'udp', 'port', '53'), stdout=sub.PIPE)
+    for packet in io.TextIOWrapper(p.stdout, encoding="utf-8"):
         traffic = network_conversation(packet,traffic,myIP)
