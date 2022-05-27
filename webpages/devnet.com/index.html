@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1),.gm-control-active:disabled>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2){display:block}.gm-control-active:active>img:nth-child(3){display:block}.gm-control-active:disabled>img:nth-child(4){display:block}
+</style><link type="text/css" rel="stylesheet" href="index_files/css_002.css"><link type="text/css" rel="stylesheet" href="index_files/css.css"><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}.gm-ui-hover-effect>span{background-color:#000}@media (forced-colors:active),(prefers-contrast:more){.gm-ui-hover-effect>span{background-color:ButtonText}}
+</style><style>.gm-style .gm-style-cc a,.gm-style .gm-style-cc button,.gm-style .gm-style-cc span,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}.gm-style .gm-style-cc a,.gm-style .gm-style-cc button,.gm-style .gm-style-cc span{outline-offset:3px}
+</style><style>@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style>.gm-style-moc{background-color:rgba(0,0,0,.45);pointer-events:none;text-align:center;transition:opacity ease-in-out}.gm-style-mot{color:white;font-family:Roboto,Arial,sans-serif;font-size:22px;margin:0;position:relative;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://static.production.devnetcloud.com/images/favicon.ico">
+    <link rel="canonical" href="https://developer.cisco.com/">
+    <title>Cisco DevNet: APIs, SDKs, Sandbox, and Community for Cisco Developers - Cisco DevNet</title>
+    <meta name="description" content="Cisco DevNet is Cisco's developer program to help developers and IT professionals who want to write
+    applications and develop integrations with Cisco products, platforms, and APIs. Cisco DevNet includes Cisco's
+    products in software-defined networking, security, cloud, data center, internet of things, collaboration, and
+    open-source software development. The DevNet site also provides learning and sandbox environments for those trying
+    to learn coding and testing apps.">
+    <meta name="render:status_code" content="200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="name" content="devnet-site">
+    <meta name="version" content="v2.9.29">
+    <meta name="commitid" content="2d0e90ee121de03b7bfd6b6034dea688cb3cc59d">
+    <meta name="google-site-verification" content="VZTd1_gLKvszJag7eeLUuA9i9ePzHLsidcRsieQcqug">
+    <link href="index_files/main.css" rel="stylesheet">
+    <link href="index_files/app.css" rel="stylesheet" media="all" onload="this.media='all'">
+    <link href="index_files/fontawesome-all.css" rel="stylesheet" media="all" onload="this.media='all'">
+    <link href="index_files/sdk.css" rel="stylesheet" media="all" onload="this.media='all'">
+    <link href="index_files/pubhub.css" rel="stylesheet" media="all" onload="this.media='all'">
+    
+	<link rel="alternate" hreflang="x-default" href="https://developer.cisco.com/">
+    <link rel="alternate" hreflang="en-us" href="https://developer.cisco.com/">
+    <link rel="alternate" hreflang="en" href="https://developer.cisco.com/">
+    <link rel="alternate" hreflang="ja-jp" href="https://developer.cisco.com/japan/">
+    <link rel="alternate" hreflang="ja" href="https://developer.cisco.com/japan/">
+
+	<meta property="og:title" name="og:title" content="Cisco DevNet">
+	<meta property="og:image" name="og:image" content="https://avatars0.githubusercontent.com/u/8827988?s=200&amp;v=4">
+	<meta property="og:type" name="og:type" content="website">
+	<meta property="og:site_name" name="og:site_name" content="Cisco DevNet">
+	<meta property="og:description" name="og:description" content="Cisco DevNet is Cisco's developer program to help developers and IT professionals who want to write applications and develop integrations with Cisco products, platforms, and APIs. Cisco DevNet includes Cisco's products in software-defined networking, security, cloud, data center, internet of things, collaboration, and open-source software development. The DevNet site also provides learning and sandbox environments for those trying to learn coding and testing apps.">
+	<meta property="og:url" name="og:url" content="https://developer.cisco.com">
+	<meta property="twitter:card" name="twitter:card" content="summary">
+	<meta property="twitter:site" name="twitter:site" content="@CiscoDevNet">
+<script async="" type="text/javascript" src="index_files/rtp.js"></script><script type="text/javascript" async="" src="index_files/munchkin.js"></script><style>@media print {#ghostery-tracker-tally {display:none !important}}</style><script src="index_files/index.js"></script><script src="index_files/slick.js"></script><script src="index_files/widgets.js"></script><script type="text/javascript" charset="UTF-8" src="index_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="index_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="index_files/map.js"></script><script src="index_files/richmarker.js"></script><script type="text/javascript" charset="UTF-8" src="index_files/onion.js"></script><script type="text/javascript" charset="UTF-8" src="index_files/ViewportInfoService.GetViewportInfo"></script><script type="text/javascript" charset="UTF-8" src="index_files/AuthenticationService.Authenticate"></script><script type="text/javascript" charset="UTF-8" src="index_files/vt"></script><script type="text/javascript" charset="UTF-8" src="index_files/QuotaService.RecordEvent"></script><script charset="utf-8" src="index_files/momenttimeline.js"></script><script charset="utf-8" src="index_files/timeline.js"></script><script type="text/javascript" charset="UTF-8" src="index_files/controls.js"></script></head>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    <div id="root"><div><div><div class="dn-header"><div class="dn-header-bar-part dn-header-bar-pc"><div class="container"><div class="row align-items-stretch"><div class="col-auto dn-header-logo"><div class="header-logo-box"><a id="header-logo" data-track-name="Header-Logo" data-track-value="/" title="DevNet" href="https://developer.cisco.com/">DevNet</a></div></div><div class="col dn-header-menu-entry align-items-center"><ul><li id="menu-discover" data-track-name="Menu-Discover" data-track-value="menu"><div class="dn-header-top-menu">Discover</div></li><li id="menu-tech" data-track-name="Menu-Tech" data-track-value="menu"><div class="dn-header-top-menu">Technologies</div></li><li id="menu-community" data-track-name="Menu-Community" data-track-value="menu"><div class="dn-header-top-menu">Community</div></li><li id="menu-support" data-track-name="Menu-Support" data-track-value="menu"><div class="dn-header-top-menu">Support</div></li><li><a id="menu-events" data-track-name="Menu-Events" data-track-value="/events/" href="https://developer.cisco.com/events/" class="dn-header-top-menu events">Events</a></li><li id="menu-new" data-track-name="Menu-New" data-track-value="menu"><div class="dn-header-top-menu">New Announcement</div></li></ul></div><div class="dn-header-search-col"><div class="dn-header-search"><div class="dn-header-search-mask"></div><div class="dn-header-search-box"><div id="header-search" data-track-name="Header-Search" data-track-value="icon" class="dn-header-search-box-icon"></div><div class="dn-header-search-box-text"><div class="dn-header-search-box-ipt"><input type="search" class="form-control" id="search_box" placeholder="Search"></div></div></div><div class="dn-header-search-result null"></div></div></div><div class="col-auto dn-header-action"><div class="text-right dn-header-user-col" id="header-avatar" data-track-name="Header-Avatar" data-track-value="icon"><span class="dn-avatar dn-header-avatar" id="dn-profile-mount">DE</span><span class="dn-header-name hidden-sm-down">Me</span></div></div></div></div></div><div class="dn-header-bar-part dn-header-bar-mobile"><div class="dn-header-bar-mobile-placeholder"><div class="container dn-header-box"><div class="row align-items-stretch"><div class="dn-header-burger"><span id="mobile-header-burger" data-track-name="Mobile-Header-Burger" class="fa fa-bars dn-header-burger-icon"></span></div><div class="col-auto dn-header-logo"><div class="mobile-header-logo-box"><a id="mobile-header-logo" data-track-name="Mobile-Header-Logo" data-track-value="/" title="DevNet" href="https://developer.cisco.com/">DevNet</a></div></div><div class="col-auto dn-header-action"><div class="text-right dn-header-user-col" id="header-mobile-avatar" data-track-name="Header-Mobile-Avatar" data-track-value="icon"><span class="dn-avatar dn-header-avatar" id="dn-profile-mount-mobile">DE</span><span class="dn-header-name hidden-sm-down">Me</span></div></div></div></div></div><div class="dn-header-bar-mobile-fixed"><div class="container dn-header-box"><div class="row align-items-stretch"><div class="dn-header-burger"><span id="mobile-header-burger" data-track-name="Mobile-Header-Burger" class="fa fa-bars dn-header-burger-icon"></span></div><div class="col-auto dn-header-logo"><div class="mobile-header-logo-box"><a id="mobile-header-logo" data-track-name="Mobile-Header-Logo" data-track-value="/" title="DevNet" href="https://developer.cisco.com/">DevNet</a></div></div><div class="col-auto dn-header-action"><div class="text-right dn-header-user-col" id="header-mobile-avatar" data-track-name="Header-Mobile-Avatar" data-track-value="icon"><span class="dn-avatar dn-header-avatar" id="dn-profile-mount-mobile">DE</span><span class="dn-header-name hidden-sm-down">Me</span></div></div></div></div></div></div></div><div id="devnet-site"><div id="pubhub-widgets" class="pubhub-site-container"><div class="s-alert-wrapper"></div><div class="widgets"><div><div class="pubhub-widget-container" data-selector="pubhubtitle"></div>
+<div class="pubhub-widget-container" data-selector="pubhubdescription"></div>
+<div class="pubhub-widget-container" data-selector="link"><link rel="stylesheet" href="index_files/index.css"></div>
+<div class="pubhub-widget-container" data-selector="link"><link rel="stylesheet" href="index_files/slick.css"></div>
+<div class="pubhub-widget-container" data-selector="link"><link rel="stylesheet" href="index_files/slick-theme.css"></div>
+<div class="pubhub-widget-container" data-selector="NewRotatingBanner"><div class="pubhub-new-rotating-banner"><div class="pubhub-new-rotating-banner-prev"></div><div class="pubhub-new-rotating-banner-next"></div><div class="pubhub-new-slider" style="height: 281.6px;"><div class="pubhub-new-slider-slide pubhub-new-slide-out-left"><div class="pubhub-new-rotating-banner-page" style="background-image: url(&quot;https://pubhub.devnetcloud.com/media/index/site/images/banner/KCEU22-DevRel-Site-Image-ONLY.png&quot;);"><div class="pubhub-new-rotating-banner-page-content"><div class="pubhub-new-rotating-banner-page-title">Kubecon + CloudNativeCon Europe</div><div class="pubhub-new-rotating-banner-page-description">May 16-20, 2022</div><a id="" class="pubhub-new-rotating-banner-page-action" href="https://bit.ly/3FoNl31" target="_blank">Learn More</a></div></div></div><div class="pubhub-new-slider-slide pubhub-new-slide-in-left"><div class="pubhub-new-rotating-banner-page" style="background-image: url(&quot;https://pubhub.devnetcloud.com/media/index/site/images/banner/carouselonenewsletter.png&quot;);"><div class="pubhub-new-rotating-banner-page-content"><div class="pubhub-new-rotating-banner-page-title">Meraki Dashboard API</div><div class="pubhub-new-rotating-banner-page-description">A RESTful API to programmatically manage and monitor Meraki networks at scale.</div><a id="" class="pubhub-new-rotating-banner-page-action" href="https://bit.ly/3wd4p7J" target="_blank">Read more</a></div></div></div><div class="pubhub-new-slider-slide"><div class="pubhub-new-rotating-banner-page" style="background-image: url(&quot;https://pubhub.devnetcloud.com/media/index/site/images/banner/compressed_bg_new_secure3.png&quot;);"><div class="pubhub-new-rotating-banner-page-content"><div class="pubhub-new-rotating-banner-page-title">Cisco SecureX</div><div class="pubhub-new-rotating-banner-page-description">A Simplified Security Experience</div><a id="" class="pubhub-new-rotating-banner-page-action" href="https://bit.ly/3MSMSIQ" target="_blank">Learn More</a></div></div></div><div class="pubhub-new-slider-indicator"><span class="pubhub-new-slider-indicator-item" data-index="0"></span><span class="pubhub-new-slider-indicator-item pubhub-new-slider-indicator-item-activated " data-index="1"><span class="activated-item-progress-bar"></span></span><span class="pubhub-new-slider-indicator-item" data-index="2"></span></div></div></div></div>
+<div class="ph-impt-section" style="opacity: 1; height: auto; margin-top: -32.528px;">
+ <div class="container slider-container">
+  <div id="slider" class="slick-initialized slick-slider"><button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 5700px; transform: translate3d(-1140px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-3" id="" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-4" data-track-name="Slide-CodeExchange" data-track-value="https://blogs.cisco.com/developer/janelstop3ciscolive01?ccid=cl22-page&amp;dtid=carousel02&amp;oid=janelkratky-fy22-q4-0000-janelstop3ciscolive01-ww" href="https://blogs.cisco.com/developer/janelstop3ciscolive01?ccid=cl22-page&amp;dtid=carousel02&amp;oid=janelkratky-fy22-q4-0000-janelstop3ciscolive01-ww" id="" tabindex="-1">
+     <div class="title" id="">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="">
+      Janel’s Top 3 Cisco Live DevNet Zone Sessions
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-5" data-track-name="Slide-Events" data-track-value="https://blogs.cisco.com/developer/automationprogrammabilitydevops01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jeffrbul-fy22-q4-0000-automationprogrammabilitydevops01-ww" href="https://blogs.cisco.com/developer/automationprogrammabilitydevops01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jeffrbul-fy22-q4-0000-automationprogrammabilitydevops01-ww" id="" tabindex="-1">
+     <div class="title" id="">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="">
+      Automation or Programmability: Which Is better For DevOps?
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-6" data-track-name="slide-business-continuity" data-track-value="https://blogs.cisco.com/developer/opa_and_styra01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jasondavis-fy22-q4-0000-opa_and_styra01-ww" href="https://blogs.cisco.com/developer/opa_and_styra01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jasondavis-fy22-q4-0000-opa_and_styra01-ww" id="" target="_blank" tabindex="-1">
+     <div class="title" id="">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="">
+      Policy Management for Enterprise Software Developers and Administrators
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 380px;"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-1" data-track-name="slide-business-continuity" data-track-value="https://stackoverflow.blog/2022/05/05/security-needs-to-shift-left-into-the-software-development-lifecycle?utm_source=carousel02&amp;utm_medium=michaelchenetz&amp;utm_campaign=shiftleft-page&amp;utm_term=fy22-q4-0000&amp;utm_content=stackoverflow20220505-ww" href="https://stackoverflow.blog/2022/05/05/security-needs-to-shift-left-into-the-software-development-lifecycle?utm_source=carousel02&amp;utm_medium=michaelchenetz&amp;utm_campaign=shiftleft-page&amp;utm_term=fy22-q4-0000&amp;utm_content=stackoverflow20220505-ww" id="slide-1-business-continuity" target="_blank" tabindex="0">
+     <div class="title" id="impt-title-1">
+      IN THE NEWS
+     </div>
+     <div class="desc" id="impt-desc-1">
+      Security needs to shift left into the software development lifecycle
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 380px;"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-2" data-track-name="slide-specialization-webinar" data-track-value="https://blogs.cisco.com/developer/observabilityvsmonitoringdevops01?ccid=appdynamics-page&amp;dtid=carousel02&amp;oid=stuartclark-fy22-q4-0000-observabilityvsmonitoringdevops01-ww" href="https://blogs.cisco.com/developer/observabilityvsmonitoringdevops01?ccid=appdynamics-page&amp;dtid=carousel02&amp;oid=stuartclark-fy22-q4-0000-observabilityvsmonitoringdevops01-ww" id="slide-2-specialization-webinar" target="_blank" tabindex="0">
+     <div class="title" id="impt-title-2">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="impt-desc-2">
+      Observability vs. monitoring for DevOps
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 380px;"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-3" data-track-name="slide-network-automation" data-track-value="https://blogs.cisco.com/developer/doingtechsupport01?ccid=learningtracks-page&amp;dtid=carousel02&amp;oid=denisekwan-fy22-q4-0000-doingtechsupport01-ww" href="https://blogs.cisco.com/developer/doingtechsupport01?ccid=learningtracks-page&amp;dtid=carousel02&amp;oid=denisekwan-fy22-q4-0000-doingtechsupport01-ww" id="slide-3-network-automation" target="_blank" tabindex="0">
+     <div class="title" id="impt-title-3">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="impt-desc-3">
+      What I learned by doing tech support
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-4" data-track-name="Slide-CodeExchange" data-track-value="https://blogs.cisco.com/developer/janelstop3ciscolive01?ccid=cl22-page&amp;dtid=carousel02&amp;oid=janelkratky-fy22-q4-0000-janelstop3ciscolive01-ww" href="https://blogs.cisco.com/developer/janelstop3ciscolive01?ccid=cl22-page&amp;dtid=carousel02&amp;oid=janelkratky-fy22-q4-0000-janelstop3ciscolive01-ww" id="slide-4-codeexchange" tabindex="-1">
+     <div class="title" id="impt-title-4">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="impt-desc-4">
+      Janel’s Top 3 Cisco Live DevNet Zone Sessions
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide" data-slick-index="4" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-5" data-track-name="Slide-Events" data-track-value="https://blogs.cisco.com/developer/automationprogrammabilitydevops01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jeffrbul-fy22-q4-0000-automationprogrammabilitydevops01-ww" href="https://blogs.cisco.com/developer/automationprogrammabilitydevops01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jeffrbul-fy22-q4-0000-automationprogrammabilitydevops01-ww" id="slide-5-events" tabindex="-1">
+     <div class="title" id="impt-title-5">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="impt-desc-5">
+      Automation or Programmability: Which Is better For DevOps?
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-6" data-track-name="slide-business-continuity" data-track-value="https://blogs.cisco.com/developer/opa_and_styra01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jasondavis-fy22-q4-0000-opa_and_styra01-ww" href="https://blogs.cisco.com/developer/opa_and_styra01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jasondavis-fy22-q4-0000-opa_and_styra01-ww" id="slide-1-business-continuity" target="_blank" tabindex="-1">
+     <div class="title" id="impt-title-6">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="impt-desc-6">
+      Policy Management for Enterprise Software Developers and Administrators
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-cloned" data-slick-index="6" id="" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-1" data-track-name="slide-business-continuity" data-track-value="https://stackoverflow.blog/2022/05/05/security-needs-to-shift-left-into-the-software-development-lifecycle?utm_source=carousel02&amp;utm_medium=michaelchenetz&amp;utm_campaign=shiftleft-page&amp;utm_term=fy22-q4-0000&amp;utm_content=stackoverflow20220505-ww" href="https://stackoverflow.blog/2022/05/05/security-needs-to-shift-left-into-the-software-development-lifecycle?utm_source=carousel02&amp;utm_medium=michaelchenetz&amp;utm_campaign=shiftleft-page&amp;utm_term=fy22-q4-0000&amp;utm_content=stackoverflow20220505-ww" id="" target="_blank" tabindex="-1">
+     <div class="title" id="">
+      IN THE NEWS
+     </div>
+     <div class="desc" id="">
+      Security needs to shift left into the software development lifecycle
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-cloned" data-slick-index="7" id="" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-2" data-track-name="slide-specialization-webinar" data-track-value="https://blogs.cisco.com/developer/observabilityvsmonitoringdevops01?ccid=appdynamics-page&amp;dtid=carousel02&amp;oid=stuartclark-fy22-q4-0000-observabilityvsmonitoringdevops01-ww" href="https://blogs.cisco.com/developer/observabilityvsmonitoringdevops01?ccid=appdynamics-page&amp;dtid=carousel02&amp;oid=stuartclark-fy22-q4-0000-observabilityvsmonitoringdevops01-ww" id="" target="_blank" tabindex="-1">
+     <div class="title" id="">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="">
+      Observability vs. monitoring for DevOps
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-cloned" data-slick-index="8" id="" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-3" data-track-name="slide-network-automation" data-track-value="https://blogs.cisco.com/developer/doingtechsupport01?ccid=learningtracks-page&amp;dtid=carousel02&amp;oid=denisekwan-fy22-q4-0000-doingtechsupport01-ww" href="https://blogs.cisco.com/developer/doingtechsupport01?ccid=learningtracks-page&amp;dtid=carousel02&amp;oid=denisekwan-fy22-q4-0000-doingtechsupport01-ww" id="" target="_blank" tabindex="-1">
+     <div class="title" id="">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="">
+      What I learned by doing tech support
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-cloned" data-slick-index="9" id="" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-4" data-track-name="Slide-CodeExchange" data-track-value="https://blogs.cisco.com/developer/janelstop3ciscolive01?ccid=cl22-page&amp;dtid=carousel02&amp;oid=janelkratky-fy22-q4-0000-janelstop3ciscolive01-ww" href="https://blogs.cisco.com/developer/janelstop3ciscolive01?ccid=cl22-page&amp;dtid=carousel02&amp;oid=janelkratky-fy22-q4-0000-janelstop3ciscolive01-ww" id="" tabindex="-1">
+     <div class="title" id="">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="">
+      Janel’s Top 3 Cisco Live DevNet Zone Sessions
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-cloned" data-slick-index="10" id="" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-5" data-track-name="Slide-Events" data-track-value="https://blogs.cisco.com/developer/automationprogrammabilitydevops01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jeffrbul-fy22-q4-0000-automationprogrammabilitydevops01-ww" href="https://blogs.cisco.com/developer/automationprogrammabilitydevops01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jeffrbul-fy22-q4-0000-automationprogrammabilitydevops01-ww" id="" tabindex="-1">
+     <div class="title" id="">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="">
+      Automation or Programmability: Which Is better For DevOps?
+     </div>
+    </a>
+   </div></div></div><div class="slick-slide slick-cloned" data-slick-index="11" id="" aria-hidden="true" style="width: 380px;" tabindex="-1"><div><div class="card-container" style="width: 100%; display: inline-block;">
+    <a class="card card-6" data-track-name="slide-business-continuity" data-track-value="https://blogs.cisco.com/developer/opa_and_styra01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jasondavis-fy22-q4-0000-opa_and_styra01-ww" href="https://blogs.cisco.com/developer/opa_and_styra01?ccid=networkautomation-page&amp;dtid=carousel02&amp;oid=jasondavis-fy22-q4-0000-opa_and_styra01-ww" id="" target="_blank" tabindex="-1">
+     <div class="title" id="">
+      DEVELOPER BLOG
+     </div>
+     <div class="desc" id="">
+      Policy Management for Enterprise Software Developers and Administrators
+     </div>
+    </a>
+   </div></div></div></div></div><button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button></div>
+ </div>
+</div>
+<div class="ph-offer-section" style="opacity: 0;">
+ <div class="container">
+  <div class="section-title ph-xl-font" id="offer-section-title">
+   Get started with what DevNet has to offer
+  </div>
+ </div>
+ <div class="offer-full-row">
+  <div class="container offer-items-container">
+   <div class="row offer-row">
+    <div class="col offer-col">
+     <div class="offer-item">
+      <div class="box">
+       <a class="icon icon-getstarted" data-track-name="Offer-Getstarted" data-track-value="/startnow/" href="https://developer.cisco.com/startnow/" id="offer-getstarted">
+       </a>
+       <div class="line">
+       </div>
+      </div>
+      <div class="title" id="offer-title-getstarted">
+       Start Now
+      </div>
+     </div>
+    </div>
+    <div class="col offer-col">
+     <div class="offer-item">
+      <div class="box">
+       <a class="icon icon-llabs" data-track-name="Offer-Tracks" data-track-value="https://developer.cisco.com/learning/tracks" href="https://developer.cisco.com/learning/tracks" id="offer-tracks" target="_blank">
+       </a>
+       <div class="line">
+       </div>
+      </div>
+      <div class="title" id="offer-title-llabs">
+       Learning Tracks
+      </div>
+     </div>
+    </div>
+    <div class="col offer-col">
+     <div class="offer-item">
+      <div class="box">
+       <a class="icon icon-video" data-track-name="Offer-VideoCourse" data-track-value="/video/net-prog-basics/" href="https://developer.cisco.com/video/net-prog-basics/" id="offer-videocourse">
+       </a>
+       <div class="line">
+       </div>
+      </div>
+      <div class="title" id="offer-title-video">
+       Video course
+      </div>
+     </div>
+    </div>
+    <div class="col offer-col">
+     <div class="offer-item">
+      <div class="box">
+       <a class="icon icon-sandbox" data-track-name="Offer-Sandbox" data-track-value="/site/sandbox/" href="https://developer.cisco.com/site/sandbox/" id="offer-sandbox">
+       </a>
+       <div class="line">
+       </div>
+      </div>
+      <div class="title" id="offer-title-sandbox">
+       Sandbox
+      </div>
+     </div>
+    </div>
+    <div class="col offer-col">
+     <div class="offer-item">
+      <div class="box">
+       <a class="icon icon-code" data-track-name="Offer-CodeExchange" data-track-value="" href="https://developer.cisco.com/codeexchange/" id="offer-codeexchange">
+       </a>
+       <div class="line">
+       </div>
+      </div>
+      <div class="title" id="offer-title-code">
+       Code Exchange
+      </div>
+     </div>
+    </div>
+    <div class="col offer-col">
+     <div class="offer-item">
+      <div class="box">
+       <a class="icon icon-ecosystem" data-track-name="Offer-Ecosystem" data-track-value="/ecosystem/" href="https://developer.cisco.com/ecosystem/" id="offer-ecosystem">
+       </a>
+       <div class="line">
+       </div>
+      </div>
+      <div class="title" id="offer-title-ecosystem">
+       Ecosystem Exchange
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+<section class="tech-categories ph-tech-section" style="opacity: 0;">
+ <div class="tech-master">
+  <div class="container">
+   <div class="section-title ph-xl-font" id="tech-section-title">
+    Explore our platforms
+   </div>
+   <div class="row no-gutters">
+    <div class="col">
+     <div class="tech-categories-card" data-tech="iot" data-track-name="Tech-IoT" data-track-value="tab" id="tech-tab-iot">
+      <i type="iot">
+      </i>
+      <span id="tech-iot">
+       IoT
+      </span>
+     </div>
+    </div>
+    <div class="col">
+     <div class="tech-categories-card" data-tech="cloud" data-track-name="Tech-Cloud" data-track-value="tab" id="tech-tab-cloud">
+      <i type="cloud">
+      </i>
+      <span id="tech-cloud">
+       Cloud
+      </span>
+     </div>
+    </div>
+    <div class="col">
+     <div class="tech-categories-card" data-tech="network" data-track-name="Tech-Networking" data-track-value="tab" id="tech-tab-networking">
+      <i type="networking">
+      </i>
+      <span id="tech-networking">
+       Networking
+      </span>
+     </div>
+    </div>
+    <div class="col">
+     <div class="tech-categories-card" data-tech="data-center" data-track-name="Tech-DataCenter" data-track-value="tab" id="tech-tab-datacenter">
+      <i type="data-center">
+      </i>
+      <span id="tech-data-center">
+       Data Center
+      </span>
+     </div>
+    </div>
+    <div class="col">
+     <div class="tech-categories-card" data-tech="security" data-track-name="Tech-Security" data-track-value="tab" id="tech-tab-security">
+      <i type="security">
+      </i>
+      <span id="tech-security">
+       Security
+      </span>
+     </div>
+    </div>
+    <div class="col">
+     <div class="tech-categories-card" data-tech="mobility" data-track-name="Tech-Mobility" data-track-value="tab" id="tech-tab-mobility">
+      <i type="mobility">
+      </i>
+      <span id="tech-mobility">
+       Mobility
+      </span>
+     </div>
+    </div>
+    <div class="col">
+     <div class="tech-categories-card" data-tech="open-source" data-track-name="Tech-OpenSource" data-track-value="tab" id="tech-tab-opensource">
+      <i type="open-source">
+      </i>
+      <span id="tech-open-source">
+       Open Source
+      </span>
+     </div>
+    </div>
+    <div class="col">
+     <div class="tech-categories-card" data-tech="collab" data-track-name="Tech-Collaboration" data-track-value="tab" id="tech-tab-collaboration">
+      <i type="collaboration">
+      </i>
+      <span id="tech-collaboration">
+       Collaboration
+      </span>
+     </div>
+    </div>
+    <div class="col">
+     <div class="tech-categories-card" data-tech="services" data-track-name="Tech-Services" data-track-value="tab" id="tech-tab-services">
+      <i type="services">
+      </i>
+      <span id="tech-services">
+       Services
+      </span>
+     </div>
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="tech-detail" style="display: none">
+  <div class="pubhub-widget-container" data-selector="featureSection"><div id="tech-detail-iot" class="pubhub-feature-section"><div class="pubhub-feature-section-header"><div class="container"><div class="pubhub-feature-section-header-title">
+     Explore IoT
+    </div></div></div><div class="pubhub-feature-section-body container"><div class="row"><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/iot/"><img src="index_files/iot-1.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       IOT dev center
+      </div>
+      <div class="desc">
+       Cisco IoT makes digital transformation a reality in factories, 
+transportation, and utilities. Learn how to start integrating now!
+      </div>
+     </div></div></div></div></div></div></div></div>
+  <div class="pubhub-widget-container" data-selector="featureSection"><div id="tech-detail-cloud" class="pubhub-feature-section"><div class="pubhub-feature-section-header"><div class="container"><div class="pubhub-feature-section-header-title">
+     Explore Cloud
+    </div></div></div><div class="pubhub-feature-section-body container"><div class="row"><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/cloud/"><img src="index_files/cloud-1.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Cloud Dev Center
+      </div>
+      <div class="desc">
+       Explore and learn the APIs, tools, and capabilities for building solutions in private, public, and hybrid clouds.
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/intersight/"><img src="index_files/cloud-2.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Intersight Dev Center
+      </div>
+      <div class="desc">
+       Provision and configure cloud-based and on-prem services with a cloud ops platform that includes Terraform and Ansible
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/iac/"><img src="index_files/cloud-3.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Infrastructure as Code Dev Center
+      </div>
+      <div class="desc">
+       Cisco helps you embrace DevOps, APIs, and Automation to manage 
+networks efficiently, control risk, and optimize for growth and 
+innovation.
+      </div>
+     </div></div></div></div></div></div></div></div>
+  <div class="pubhub-widget-container" data-selector="featureSection"><div id="tech-detail-network" class="pubhub-feature-section"><div class="pubhub-feature-section-header"><div class="container"><div class="pubhub-feature-section-header-title">
+     Explore Networking
+    </div></div></div><div class="pubhub-feature-section-body container"><div class="row"><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/networking/"><img src="index_files/net-1.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Networking Dev Center
+      </div>
+      <div class="desc">
+       Learn how you can integrate with the network through full system 
+management solutions in the cloud, utilize automation platforms and 
+controllers, or directly inter...
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/dnacenter/"><img src="index_files/net-4.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Cisco DNA Center Platform
+      </div>
+      <div class="desc">
+       Create connections never before possible. Integrate devices from 
+any provider. Transform slow, manual processes into fast, automated 
+workflows.
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/meraki"><img src="index_files/net-3.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Cisco Meraki
+      </div>
+      <div class="desc">
+       can create apps that enable loyalty programs, track the location 
+of WiFi and BLE devices, build analytics extensions, and make it easier 
+to deploy at scale.
+      </div>
+     </div></div></div></div></div></div></div></div>
+  <div class="pubhub-widget-container" data-selector="featureSection"><div id="tech-detail-data-center" class="pubhub-feature-section"><div class="pubhub-feature-section-header"><div class="container"><div class="pubhub-feature-section-header-title">
+     Explore Data Center
+    </div></div></div><div class="pubhub-feature-section-body container"><div class="row"><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/data-center/"><img src="index_files/data-1.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Data Center Dev Center
+      </div>
+      <div class="desc">
+       Network, Compute, Storage. One system or tens of thousands. 
+Cisco's Data Center APIs enable task and workflow automation and 
+orchestration providing all ...
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/aci/"><img src="index_files/data-2.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Application Centric Infrastructure
+      </div>
+      <div class="desc">
+       The Cisco ACI programmability model allows complete programmatic access to the application centric infrastructure.
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/intersight/"><img src="index_files/data-3.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Intersight
+      </div>
+      <div class="desc">
+       Intersight offers an intelligent level of management that enables
+ IT organizations to analyze, simplify, and automate their environments.
+      </div>
+     </div></div></div></div></div></div></div></div>
+  <div class="pubhub-widget-container" data-selector="featureSection"><div id="tech-detail-security" class="pubhub-feature-section"><div class="pubhub-feature-section-header"><div class="container"><div class="pubhub-feature-section-header-title">
+     Explore Security
+    </div></div></div><div class="pubhub-feature-section-body container"><div class="row"><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/security/"><img src="index_files/security-1.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Security Dev Center
+      </div>
+      <div class="desc">
+       Cisco Security supports third-party integration across its portfolio with 18+ open APIs and integration points.
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/firepower/"><img src="index_files/security-2.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Firepower Management Center
+      </div>
+      <div class="desc">
+       The Cisco Firepower Management Center platform and Cisco AMP 
+Cloud offer powerful, documented integration points for customers.
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/docs/stealthwatch/"><img src="index_files/security-3.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Stealthwatch
+      </div>
+      <div class="desc">
+       The Cisco Stealthwatch Data Exporter allows users to take flow 
+data from the Stealthwatch system to be processed and stored by their 
+own application.
+      </div>
+     </div></div></div></div></div></div></div></div>
+  <div class="pubhub-widget-container" data-selector="featureSection"><div id="tech-detail-mobility" class="pubhub-feature-section"><div class="pubhub-feature-section-header"><div class="container"><div class="pubhub-feature-section-header-title">
+     Explore Mobility
+    </div></div></div><div class="pubhub-feature-section-body container"><div class="row"><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/mobility/"><img src="index_files/mobility-1.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Mobility Dev Center
+      </div>
+      <div class="desc">
+       Transform your mobile app experience with technologies and APIs 
+such as real-time location services and analytics, QoS, messaging, voice
+ and video.
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/fast-lane/"><img src="index_files/mobility-2.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Fast Lane
+      </div>
+      <div class="desc">
+       Give your iOS app a boost on Cisco networks, and get a DevNet Fast Lane validation for your app
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/cmx-mobility-services/"><img src="index_files/mobility-3.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       CMX Mobility Services
+      </div>
+      <div class="desc">
+       Cisco Connected Mobile Experiences (CMX) is a smart Wi-Fi 
+solution that uses the Cisco wireless infrastructure to detect and 
+locate consumers’ mobile devices.
+      </div>
+     </div></div></div></div></div></div></div></div>
+  <div class="pubhub-widget-container" data-selector="featureSection"><div id="tech-detail-open-source" class="pubhub-feature-section"><div class="pubhub-feature-section-header"><div class="container"><div class="pubhub-feature-section-header-title">
+     Explore Open Source
+    </div></div></div><div class="pubhub-feature-section-body container"><div class="row"><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/opensource/"><img src="index_files/open-1.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Open Source Dev Center
+      </div>
+      <div class="desc">
+       Open source projects that benefit from significant contributions 
+by Cisco employees and are used in our products and solutions in ways 
+that are relevant to ...
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/contiv/"><img src="index_files/open-2.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Contiv
+      </div>
+      <div class="desc">
+       Contiv is a powerful, 100% open source networking solution for modern compute workloads.
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/openstack/"><img src="index_files/open-3.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       OpenStack
+      </div>
+      <div class="desc">
+       OpenStack is a large open source software project that provides a
+ platform for creating, operating, and consuming public and private 
+clouds.
+      </div>
+     </div></div></div></div></div></div></div></div>
+  <div class="pubhub-widget-container" data-selector="featureSection"><div id="tech-detail-collab" class="pubhub-feature-section"><div class="pubhub-feature-section-header"><div class="container"><div class="pubhub-feature-section-header-title">
+     Explore Collaboration
+    </div></div></div><div class="pubhub-feature-section-body container"><div class="row"><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/collaboration/"><img src="index_files/collab-1.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Collaboration Dev Center
+      </div>
+      <div class="desc">
+       Check out the latest APIs, SDKs and resources for Cisco Collaboration technologies.
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/finesse/"><img src="index_files/collab-2.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Finesse
+      </div>
+      <div class="desc">
+       Cisco Finesse is the next-generation agent desktop designed to 
+provide a customizable, user-centric experience in a customer service 
+organization.
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/webex"><img src="index_files/collab-3.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Webex
+      </div>
+      <div class="desc">
+       Develop rich integrations and powerful automation with Webex cloud-collaboration platform APIs and SDKs.
+      </div>
+     </div></div></div></div></div></div></div></div>
+  <div class="pubhub-widget-container" data-selector="featureSection"><div id="tech-detail-services" class="pubhub-feature-section"><div class="pubhub-feature-section-header"><div class="container"><div class="pubhub-feature-section-header-title">
+     Explore Services
+    </div></div></div><div class="pubhub-feature-section-body container"><div class="row"><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/PSIRT/"><img src="index_files/security-2.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Cisco PSIRT openVuln API
+      </div>
+      <div class="desc">
+       The Cisco Product Security Incident Response Team (PSIRT) 
+openVuln API is a RESTful API that allows customers to obtain Cisco 
+Security Vulnerability i...
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/site/support-apis/"><img src="index_files/service-2.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Cisco Support API
+      </div>
+      <div class="desc">
+       Cisco Support APIs allow Cisco Partner Support Services (PSS) 
+partners and Cisco Smart Net Total Care (SNTC) customers to 
+programmatically access and consume ...
+      </div>
+     </div></div></div></div><div class="pubhub-feature-section-card-container col-lg-4 col-md-6"><div class="pubhub-feature-section-card img-card has-boxshadow"><div class="pubhub-feature-section-card-iconpart has-icon"><a class="pubhub-feature-section-card-icon-container" href="https://developer.cisco.com/docs/service-apis/"><img src="index_files/service-3.png" class="pubhub-feature-section-card-icon" loading="lazy"></a></div><div class="pubhub-feature-section-card-textpart"><div class="pubhub-feature-section-card-desc">
+      <div class="title">
+       Services APIs
+      </div>
+      <div class="desc">
+       Cisco Services APIs allow partners and customers to 
+programmatically access and consume Cisco data in a simple, secure, and 
+scalable manner.
+      </div>
+     </div></div></div></div></div></div></div></div>
+ </div>
+</section>
+<div class="ph-devs-section" style="opacity: 0;">
+ <div class="tri-box ph-height-block">
+ </div>
+ <div class="app-dev">
+  <div class="skew">
+   <div class="skew-reverse">
+    <div class="app-tri-box ph-height-block">
+    </div>
+    <div class="card-container">
+     <div class="card">
+      <div class="icon">
+      </div>
+      <div class="title ph-xl-font" id="app-dev-title">
+       Welcome, App Developers
+      </div>
+      <div class="desc" id="app-dev-description">
+       Did you know that Cisco provides APIs and SDKs that you can use 
+to create enterprise-ready applications? Learn how to embed video calls,
+ provide location services and analytics, create conversational chatbots
+ using AI, and more.
+      </div>
+      <a class="btn btn-primary btn-lg" data-track-name="Developer-Application" data-track-value="/appdev/" href="https://developer.cisco.com/appdev/" id="app-dev-btn">
+       Check out the resources and use cases
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="ifr-dev">
+  <div class="skew">
+   <div class="skew-reverse">
+    <div class="ifr-tri-box ph-height-block">
+    </div>
+    <div class="card-container">
+     <div class="card">
+      <div class="icon">
+      </div>
+      <div class="title ph-xl-font" id="ifr-dev-title">
+       Hey, Infrastructure Developers
+      </div>
+      <div class="desc" id="ifr-dev-description">
+       Create connections never before possible. Integrate devices from 
+any provider. Transform slow, manual processes into fast, automated 
+workflows.
+      </div>
+      <a class="btn btn-primary btn-lg" data-track-name="Developer-Infrastructure" data-track-value="/dnacenter/" href="https://developer.cisco.com/dnacenter/" id="ifr-dev-btn">
+       Check out the Cisco DNA Center Platform
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="ph-gmap-container" style="opacity: 0;">
+ <div class="ph-gmap-title-layer">
+  <div class="ph-gmap-title" id="map-event-sec-title">
+   Join us at one of our events
+  </div>
+ </div>
+ <div class="ph-gmap" id="map" style="overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;" class="gm-style"><div><button style="background: transparent none repeat scroll 0% 0%; display: block; border: medium none; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: absolute; cursor: pointer; user-select: none; z-index: 1000002; outline-offset: 3px; right: 0px; bottom: 0px; transform: translateX(100%);" draggable="false" aria-label="Keyboard shortcuts" title="Keyboard shortcuts" type="button"></button></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;" tabindex="0" aria-label="Map" aria-roledescription="map" role="region"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 998; transform: matrix(1, 0, 0, 1, 0, -112);"><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -768px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -768px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -768px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 768px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 768px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 768px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -1024px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -1024px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -1024px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 998; transform: matrix(1, 0, 0, 1, 0, -112);"><div style="position: absolute; left: -1024px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_004.png"></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_004.png"></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_002.png"></div><div style="position: absolute; left: 768px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_002.png"></div><div style="position: absolute; left: 768px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt.png"></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt.png"></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_006.png"></div><div style="position: absolute; left: -1024px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_006.png"></div><div style="position: absolute; left: -768px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_011.png"></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_011.png"></div><div style="position: absolute; left: -768px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_003.png"></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_003.png"></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_009.png"></div><div style="position: absolute; left: -768px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_009.png"></div><div style="position: absolute; left: -1024px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_012.png"></div><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_012.png"></div><div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_005.png"></div><div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_005.png"></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_010.png"></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_010.png"></div><div style="position: absolute; left: 768px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_007.png"></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_007.png"></div><div style="position: absolute; left: -512px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_008.png"></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img style="width: 256px; height: 256px; user-select: none; border: 0px none; padding: 0px; margin: 0px; max-width: none;" draggable="false" alt="" role="presentation" src="index_files/vt_008.png"></div></div></div></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><span id="E7510A16-E955-4AE9-9F88-28F0B0AF5F13" style="display: none;">To navigate, press the arrow keys.</span></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="z-index: 4; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;" class="gm-style-moc"><p class="gm-style-mot"></p></div></div><iframe aria-hidden="true" tabindex="-1" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: medium none;" frameborder="0"></iframe><div style="pointer-events: none; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 1000002; opacity: 0; border: 2px solid rgb(26, 115, 232);"></div><div></div><div></div><div></div><div></div><div><button style="background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; margin: 10px; padding: 0px; text-transform: none; appearance: none; position: absolute; cursor: pointer; user-select: none; border-radius: 2px; height: 40px; width: 40px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; overflow: hidden; display: none; top: 0px; right: 0px;" draggable="false" aria-label="Toggle fullscreen view" title="Toggle fullscreen view" type="button" aria-pressed="false" class="gm-control-active gm-fullscreen-control"><img style="height: 18px; width: 18px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%200v6h2V2h4V0H0zm16%200h-4v2h4v4h2V0h-2zm0%2016h-4v2h6v-6h-2v4zM2%2012H0v6h6v-2H2v-4z%22/%3E%3C/svg%3E" alt=""><img style="height: 18px; width: 18px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%200v6h2V2h4V0H0zm16%200h-4v2h4v4h2V0h-2zm0%2016h-4v2h6v-6h-2v4zM2%2012H0v6h6v-2H2v-4z%22/%3E%3C/svg%3E" alt=""><img style="height: 18px; width: 18px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%200v6h2V2h4V0H0zm16%200h-4v2h4v4h2V0h-2zm0%2016h-4v2h6v-6h-2v4zM2%2012H0v6h6v-2H2v-4z%22/%3E%3C/svg%3E" alt=""></button></div><div></div><div></div><div></div><div></div><div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" style="margin: 10px; user-select: none; position: absolute; display: none; bottom: 14px; right: 0px;" draggable="false" data-control-width="0" data-control-height="0"><div class="gmnoprint" data-control-width="40" data-control-height="40" style="display: none; position: absolute;"><div style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 40px; height: 40px;"><button style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; display: none; border: 0px none; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; left: 0px; top: 0px; overflow: hidden; width: 40px; height: 40px;" draggable="false" aria-label="Rotate map clockwise" title="Rotate map clockwise" type="button" class="gm-control-active"><img alt="" style="width: 20px; height: 20px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E"><img alt="" style="width: 20px; height: 20px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E"><img alt="" style="width: 20px; height: 20px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E"></button><div style="position: relative; overflow: hidden; width: 30px; height: 1px; margin: 0px 5px; background-color: rgb(230, 230, 230); display: none;"></div><button style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; display: none; border: 0px none; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; left: 0px; top: 0px; overflow: hidden; width: 40px; height: 40px; transform: scaleX(-1);" draggable="false" aria-label="Rotate map counterclockwise" title="Rotate map counterclockwise" type="button" class="gm-control-active"><img alt="" style="width: 20px; height: 20px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E"><img alt="" style="width: 20px; height: 20px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E"><img alt="" style="width: 20px; height: 20px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h24v24H0V0z%22/%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M12.06%209.06l4-4-4-4-1.41%201.41%201.59%201.59h-.18c-2.3%200-4.6.88-6.35%202.64-3.52%203.51-3.52%209.21%200%2012.72%201.5%201.5%203.4%202.36%205.36%202.58v-2.02c-1.44-.21-2.84-.86-3.95-1.97-2.73-2.73-2.73-7.17%200-9.9%201.37-1.37%203.16-2.05%204.95-2.05h.17l-1.59%201.59%201.41%201.41zm8.94%203c-.19-1.74-.88-3.32-1.91-4.61l-1.43%201.43c.69.92%201.15%202%201.32%203.18H21zm-7.94%207.92V22c1.74-.19%203.32-.88%204.61-1.91l-1.43-1.43c-.91.68-2%201.15-3.18%201.32zm4.6-2.74l1.43%201.43c1.04-1.29%201.72-2.88%201.91-4.61h-2.02c-.17%201.18-.64%202.27-1.32%203.18z%22/%3E%3C/svg%3E"></button><div style="position: relative; overflow: hidden; width: 30px; height: 1px; margin: 0px 5px; background-color: rgb(230, 230, 230); display: none;"></div><button style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; display: block; border: 0px none; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; top: 0px; left: 0px; overflow: hidden; width: 40px; height: 40px;" draggable="false" aria-label="Tilt map" title="Tilt map" type="button" class="gm-tilt gm-control-active"><img alt="" style="width: 18px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2016h8V9H0v7zm10%200h8V9h-8v7zM0%207h8V0H0v7zm10-7v7h8V0h-8z%22/%3E%3C/svg%3E"><img alt="" style="width: 18px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2016h8V9H0v7zm10%200h8V9h-8v7zM0%207h8V0H0v7zm10-7v7h8V0h-8z%22/%3E%3C/svg%3E"><img alt="" style="width: 18px;" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2018%2016%22%3E%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2016h8V9H0v7zm10%200h8V9h-8v7zM0%207h8V0H0v7zm10-7v7h8V0h-8z%22/%3E%3C/svg%3E"></button></div></div></div></div><div><div style="margin: 0px 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a style="display: inline;" target="_blank" rel="noopener" title="Open this area in Google Maps (opens a new window)" aria-label="Open this area in Google Maps (opens a new window)" href="https://maps.google.com/maps?ll=45,0&amp;z=2&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3"><div style="width: 66px; height: 26px;"><img style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px none; padding: 0px; margin: 0px;" alt="Google" src="data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2069%2029%22%3E%3Cg%20opacity%3D%22.6%22%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%20stroke-width%3D%221.5%22%3E%3Cpath%20d%3D%22M17.4706%207.33616L18.0118%206.79504%2017.4599%206.26493C16.0963%204.95519%2014.2582%203.94522%2011.7008%203.94522c-4.613699999999999%200-8.50262%203.7551699999999997-8.50262%208.395779999999998C3.19818%2016.9817%207.0871%2020.7368%2011.7008%2020.7368%2014.1712%2020.7368%2016.0773%2019.918%2017.574%2018.3689%2019.1435%2016.796%2019.5956%2014.6326%2019.5956%2012.957%2019.5956%2012.4338%2019.5516%2011.9316%2019.4661%2011.5041L19.3455%2010.9012H10.9508V14.4954H15.7809C15.6085%2015.092%2015.3488%2015.524%2015.0318%2015.8415%2014.403%2016.4629%2013.4495%2017.1509%2011.7008%2017.1509%209.04835%2017.1509%206.96482%2015.0197%206.96482%2012.341%206.96482%209.66239%209.04835%207.53119%2011.7008%207.53119%2013.137%207.53119%2014.176%208.09189%2014.9578%208.82348L15.4876%209.31922%2016.0006%208.80619%2017.4706%207.33616z%22/%3E%3Cpath%20d%3D%22M24.8656%2020.7286C27.9546%2020.7286%2030.4692%2018.3094%2030.4692%2015.0594%2030.4692%2011.7913%2027.953%209.39011%2024.8656%209.39011%2021.7783%209.39011%2019.2621%2011.7913%2019.2621%2015.0594c0%203.25%202.514499999999998%205.6692%205.6035%205.6692zM24.8656%2012.8282C25.8796%2012.8282%2026.8422%2013.6652%2026.8422%2015.0594%2026.8422%2016.4399%2025.8769%2017.2905%2024.8656%2017.2905%2023.8557%2017.2905%2022.8891%2016.4331%2022.8891%2015.0594%2022.8891%2013.672%2023.853%2012.8282%2024.8656%2012.8282z%22/%3E%3Cpath%20d%3D%22M35.7511%2017.2905v0H35.7469C34.737%2017.2905%2033.7703%2016.4331%2033.7703%2015.0594%2033.7703%2013.672%2034.7343%2012.8282%2035.7469%2012.8282%2036.7608%2012.8282%2037.7234%2013.6652%2037.7234%2015.0594%2037.7234%2016.4439%2036.7554%2017.2962%2035.7511%2017.2905zM35.7387%2020.7286C38.8277%2020.7286%2041.3422%2018.3094%2041.3422%2015.0594%2041.3422%2011.7913%2038.826%209.39011%2035.7387%209.39011%2032.6513%209.39011%2030.1351%2011.7913%2030.1351%2015.0594%2030.1351%2018.3102%2032.6587%2020.7286%2035.7387%2020.7286z%22/%3E%3Cpath%20d%3D%22M51.953%2010.4357V9.68573H48.3999V9.80826C47.8499%209.54648%2047.1977%209.38187%2046.4808%209.38187%2043.5971%209.38187%2041.0168%2011.8998%2041.0168%2015.0758%2041.0168%2017.2027%2042.1808%2019.0237%2043.8201%2019.9895L43.7543%2020.0168%2041.8737%2020.797%2041.1808%2021.0844%2041.4684%2021.7772C42.0912%2023.2776%2043.746%2025.1469%2046.5219%2025.1469%2047.9324%2025.1469%2049.3089%2024.7324%2050.3359%2023.7376%2051.3691%2022.7367%2051.953%2021.2411%2051.953%2019.2723v-8.8366zm-7.2194%209.9844L44.7334%2020.4196C45.2886%2020.6201%2045.878%2020.7286%2046.4808%2020.7286%2047.1616%2020.7286%2047.7866%2020.5819%2048.3218%2020.3395%2048.2342%2020.7286%2048.0801%2021.0105%2047.8966%2021.2077%2047.6154%2021.5099%2047.1764%2021.7088%2046.5219%2021.7088%2045.61%2021.7088%2045.0018%2021.0612%2044.7336%2020.4201zM46.6697%2012.8282C47.6419%2012.8282%2048.5477%2013.6765%2048.5477%2015.084%2048.5477%2016.4636%2047.6521%2017.2987%2046.6697%2017.2987%2045.6269%2017.2987%2044.6767%2016.4249%2044.6767%2015.084%2044.6767%2013.7086%2045.6362%2012.8282%2046.6697%2012.8282zM55.7387%205.22083v-.75H52.0788V20.4412H55.7387V5.220829999999999z%22/%3E%3Cpath%20d%3D%22M63.9128%2016.0614L63.2945%2015.6492%2062.8766%2016.2637C62.4204%2016.9346%2061.8664%2017.3069%2061.0741%2017.3069%2060.6435%2017.3069%2060.3146%2017.2088%2060.0544%2017.0447%2059.9844%2017.0006%2059.9161%2016.9496%2059.8498%2016.8911L65.5497%2014.5286%2066.2322%2014.2456%2065.9596%2013.5589%2065.7406%2013.0075C65.2878%2011.8%2063.8507%209.39832%2060.8278%209.39832%2057.8445%209.39832%2055.5034%2011.7619%2055.5034%2015.0676%2055.5034%2018.2151%2057.8256%2020.7369%2061.0659%2020.7369%2063.6702%2020.7369%2065.177%2019.1378%2065.7942%2018.2213L66.2152%2017.5963%2065.5882%2017.1783%2063.9128%2016.0614zM61.3461%2012.8511L59.4108%2013.6526C59.7903%2013.0783%2060.4215%2012.7954%2060.9017%2012.7954%2061.067%2012.7954%2061.2153%2012.8161%2061.3461%2012.8511z%22/%3E%3C/g%3E%3Cpath%20d%3D%22M11.7008%2019.9868C7.48776%2019.9868%203.94818%2016.554%203.94818%2012.341%203.94818%208.12803%207.48776%204.69522%2011.7008%204.69522%2014.0331%204.69522%2015.692%205.60681%2016.9403%206.80583L15.4703%208.27586C14.5751%207.43819%2013.3597%206.78119%2011.7008%206.78119%208.62108%206.78119%206.21482%209.26135%206.21482%2012.341%206.21482%2015.4207%208.62108%2017.9009%2011.7008%2017.9009%2013.6964%2017.9009%2014.8297%2017.0961%2015.5606%2016.3734%2016.1601%2015.7738%2016.5461%2014.9197%2016.6939%2013.7454h-4.9931V11.6512h7.0298C18.8045%2012.0207%2018.8456%2012.4724%2018.8456%2012.957%2018.8456%2014.5255%2018.4186%2016.4637%2017.0389%2017.8434%2015.692%2019.2395%2013.9838%2019.9868%2011.7008%2019.9868z%22%20fill%3D%22%234285F4%22/%3E%3Cpath%20d%3D%22M29.7192%2015.0594C29.7192%2017.8927%2027.5429%2019.9786%2024.8656%2019.9786%2022.1884%2019.9786%2020.0121%2017.8927%2020.0121%2015.0594%2020.0121%2012.2096%2022.1884%2010.1401%2024.8656%2010.1401%2027.5429%2010.1401%2029.7192%2012.2096%2029.7192%2015.0594zM27.5922%2015.0594C27.5922%2013.2855%2026.3274%2012.0782%2024.8656%2012.0782S22.1391%2013.2937%2022.1391%2015.0594C22.1391%2016.8086%2023.4038%2018.0405%2024.8656%2018.0405S27.5922%2016.8168%2027.5922%2015.0594z%22%20fill%3D%22%23E94235%22/%3E%3Cpath%20d%3D%22M40.5922%2015.0594C40.5922%2017.8927%2038.4159%2019.9786%2035.7387%2019.9786%2033.0696%2019.9786%2030.8851%2017.8927%2030.8851%2015.0594%2030.8851%2012.2096%2033.0614%2010.1401%2035.7387%2010.1401%2038.4159%2010.1401%2040.5922%2012.2096%2040.5922%2015.0594zM38.4734%2015.0594C38.4734%2013.2855%2037.2087%2012.0782%2035.7469%2012.0782%2034.2851%2012.0782%2033.0203%2013.2937%2033.0203%2015.0594%2033.0203%2016.8086%2034.2851%2018.0405%2035.7469%2018.0405%2037.2087%2018.0487%2038.4734%2016.8168%2038.4734%2015.0594z%22%20fill%3D%22%23FABB05%22/%3E%3Cpath%20d%3D%22M51.203%2010.4357v8.8366C51.203%2022.9105%2049.0595%2024.3969%2046.5219%2024.3969%2044.132%2024.3969%2042.7031%2022.7955%2042.161%2021.4897L44.0417%2020.7095C44.3784%2021.5143%2045.1997%2022.4588%2046.5219%2022.4588%2048.1479%2022.4588%2049.1499%2021.4487%2049.1499%2019.568V18.8617H49.0759C48.5914%2019.4612%2047.6552%2019.9786%2046.4808%2019.9786%2044.0171%2019.9786%2041.7668%2017.8352%2041.7668%2015.0758%2041.7668%2012.3%2044.0253%2010.1319%2046.4808%2010.1319%2047.6552%2010.1319%2048.5914%2010.6575%2049.0759%2011.2323H49.1499V10.4357H51.203zM49.2977%2015.084C49.2977%2013.3512%2048.1397%2012.0782%2046.6697%2012.0782%2045.175%2012.0782%2043.9267%2013.3429%2043.9267%2015.084%2043.9267%2016.8004%2045.175%2018.0487%2046.6697%2018.0487%2048.1397%2018.0487%2049.2977%2016.8004%2049.2977%2015.084z%22%20fill%3D%22%234285F4%22/%3E%3Cpath%20d%3D%22M54.9887%205.22083V19.6912H52.8288V5.220829999999999H54.9887z%22%20fill%3D%22%2334A853%22/%3E%3Cpath%20d%3D%22M63.4968%2016.6854L65.1722%2017.8023C64.6301%2018.6072%2063.3244%2019.9869%2061.0659%2019.9869%2058.2655%2019.9869%2056.2534%2017.827%2056.2534%2015.0676%2056.2534%2012.1439%2058.2901%2010.1483%2060.8278%2010.1483%2063.3818%2010.1483%2064.6301%2012.1768%2065.0408%2013.2773L65.2625%2013.8357%2058.6843%2016.5623C59.1853%2017.5478%2059.9737%2018.0569%2061.0741%2018.0569%2062.1746%2018.0569%2062.9384%2017.5067%2063.4968%2016.6854zM58.3312%2014.9115L62.7331%2013.0884C62.4867%2012.4724%2061.764%2012.0454%2060.9017%2012.0454%2059.8012%2012.0454%2058.2737%2013.0145%2058.3312%2014.9115z%22%20fill%3D%22%23E94235%22/%3E%3C/svg%3E" draggable="false"></div></a></div></div><div></div><div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 24px; bottom: 0px;"><div draggable="false" style="user-select: none; height: 14px; line-height: 14px;" class="gm-style-cc"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><button style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; display: inline-block; border: 0px none; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; color: rgb(0, 0, 0); font-family: inherit; line-height: inherit;" draggable="false" aria-label="Keyboard shortcuts" title="Keyboard shortcuts" type="button">Keyboard shortcuts</button></div></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 12px; bottom: 0px; width: 12px;"><div draggable="false" style="user-select: none; height: 14px; line-height: 14px;" class="gm-style-cc"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><button style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; display: none; border: 0px none; margin: 0px; padding: 0px; text-transform: none; appearance: none; position: relative; cursor: pointer; user-select: none; color: rgb(0, 0, 0); font-family: inherit; line-height: inherit;" draggable="false" aria-label="Map Data" title="Map Data" type="button">Map Data</button><span>Map data ©2022</span></div></div></div><div class="gmnoprint gm-style-cc" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;" draggable="false"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="text-decoration: none; cursor: pointer; color: rgb(0, 0, 0);" href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" rel="noopener">Terms of Use</a></div></div><div draggable="false" style="user-select: none; height: 14px; line-height: 14px; display: none; position: absolute; right: 0px; bottom: 0px;" class="gm-style-cc"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_blank" rel="noopener" title="Report errors in the road map or imagery to Google" dir="ltr" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(0, 0, 0); text-decoration: none; position: relative;" href="https://www.google.com/maps/@45,0,2z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3">Report a map error</a></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(0, 0, 0); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2022</div></div></div></div></div></div>
+ <div class="ph-gmap-ctrl-layer">
+  <a class="ph-gamp-btn" data-track-name="Map-ViewAllEvents" data-track-value="https://developer.cisco.com/events/" href="https://developer.cisco.com/events/" id="map-view-all-events">
+   View all upcoming events
+  </a>
+  <div class="tri-box ph-height-block">
+  </div>
+ </div>
+ <div class="ph-gmap-dialog-layer">
+  <div class="dialog-mask">
+  </div>
+  <a class="dialog">
+   <div class="event-title" id="dlg-event-title">
+   </div>
+   <div class="event-period" id="dlg-event-period">
+   </div>
+   <div class="event-city" id="dlg-event-city">
+   </div>
+  </a>
+ </div>
+</div>
+<div class="ph-blog-section" style="opacity: 0;">
+ <div class="container">
+  <div class="sec-title ph-xl-font" id="blog-sec-title">
+   Our latest posts and tweets
+  </div>
+  <div class="row">
+   <div class="col-12 col-md-6">
+    <div class="ph-blog-card">
+     <div class="ph-tweets-container">
+      <iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 100%; height: 500px; padding: 0px; border: medium none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" data-widget-id="profile:CiscoDevNet" title="Twitter Timeline" frameborder="0"></iframe>
+     </div>
+    </div>
+   </div>
+   <div class="col-12 col-md-6">
+    <div class="ph-blog-card">
+     <div class="ph-blog-entry-container">
+      <div class="blog-widget">
+       <div class="header">
+        <div id="blog-widget-title">
+         Blog
+        </div>
+       </div>
+       <div class="body">
+        <ul class="blog-list" id="blog-list">
+        <li class="entry"><a href="https://blogs.cisco.com/developer/gitlabcicdpipelines01" target="_blank" class="title">Using CI/CD Pipelines for Infrastructure Configuration and Management</a><div class="creator-date-row"><div class="creator">Adrian Iliesiu</div><div class="date">May 6, 2022</div></div><div class="content">Learn
+ how to use Gitlab CE as a foundational component for a CI/CD pipeline 
+to manage and configure a simple CML simulated network.</div></li><li class="entry"><a href="https://blogs.cisco.com/developer/maythe4thstarwarsapis" target="_blank" class="title">Celebrate May the 4th with these Star Wars APIs</a><div class="creator-date-row"><div class="creator">Jeff Bull</div><div class="date">May 4, 2022</div></div><div class="content">Developers: Check out 6 (ish) Star Wars APIs to have fun with this Star Wars Day! </div></li><li class="entry"><a href="https://blogs.cisco.com/developer/observabilityvsmonitoringdevops01" target="_blank" class="title">Observability vs. monitoring for DevOps</a><div class="creator-date-row"><div class="creator">Stuart Clark</div><div class="date">May 3, 2022</div></div><div class="content">We need both monitoring and observability in the DevOps world. Let’s look at these two concepts in more detail.</div></li><li class="entry"><a href="https://blogs.cisco.com/developer/doingtechsupport01" target="_blank" class="title">What I learned by doing tech support</a><div class="creator-date-row"><div class="creator">Denise Kwan</div><div class="date">May 2, 2022</div></div><div class="content">She
+ never wanted to do product support, but she is glad she did. Here are 
+five important lessons for enterprise developers from the experience.</div></li></ul>
+       </div>
+       <div class="footer">
+        <a data-track-name="Blog-ViewMore" data-track-value="https://blogs.cisco.com/developer" href="https://blogs.cisco.com/developer" id="blog-widget-view-more" target="_blank">
+         View the blog
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="ph-join-section" id="signup-section" style="opacity: 0; display: none;">
+ <div class="container">
+  <div class="title ph-xl-font" id="join-title">
+   Join the DevNet community
+  </div>
+  <div class="desc" id="join-description">
+   Access learning materials, Cisco APIs &amp; SDKs, and technology solutions for your business problems.
+  </div>
+  <div class="btn btn-primary btn-lg" data-track-name="Join-Section" data-track-value="button" id="join-btn">
+   Join DevNet for free
+  </div>
+ </div>
+</div>
+<div class="pubhub-widget-container" data-selector=".pubhub-inlinescript"><script>
+ PubHub.util.socialLogin.onLoaderReady(function () {
+        try {
+            var logged = PubHub.util.socialLogin.logged();
+            if (logged) {
+                document.getElementById('signup-section').style.display = 'none';
+            } else {
+                document.querySelector("#join-btn").addEventListener('click', function () {
+                    PlatformSDK.openLogin();
+                }, false)
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
+</script></div>
+<div class="pubhub-widget-container" data-selector=".pubhub-inlinescript"><script>
+ (function() {
+        function gtag() { if (dataLayer) dataLayer.push(arguments) }
+
+        function abtest(value, name) {
+            console.log("[ab/test] (home-page) callback", value);
+
+            if (value == "1") {
+                var dom = document.querySelector("#offer-tracks");
+                dom.href = "/learningcenter/";
+                dom.dataset.trackValue = '/learningcenter/';
+                document.querySelector("#offer-title-llabs").textContent = "Learning Labs Center";
+            }
+        }
+
+        gtag('event', 'optimize.callback', {
+              callback: abtest
+        });
+    })()
+</script></div>
+<div class="pubhub-widget-container" data-selector="script[data-src]"></div>
+</div></div></div></div><div class="dn-footer"><div class="dn-footer-nav"><div class="container"><div class="row"><div class="dn-footer-nav-col col-xl-2 col-lg-3 col-md-4 col-6"><h6>DevNet</h6><ul><li><a id="footer-nav-devnet-newciscocertifications" data-track-name="Footer-Nav-DevNet-NewCiscoCertifications" data-track-value="/certification/" href="https://developer.cisco.com/certification/">New Cisco Certifications</a></li><li><a id="footer-nav-devnet-devnetautomationexchange" data-track-name="Footer-Nav-DevNet-DevNetAutomationExchange" data-track-value="/network-automation/" href="https://developer.cisco.com/network-automation/">DevNet Automation Exchange</a></li><li><a id="footer-nav-devnet-sandbox" data-track-name="Footer-Nav-DevNet-Sandbox" data-track-value="/site/sandbox/" href="https://developer.cisco.com/site/sandbox/">Sandbox</a></li><li><a id="footer-nav-devnet-learningtracks" data-track-name="Footer-Nav-DevNet-LearningTracks" data-track-value="https://developer.cisco.com/learning/tracks" href="https://developer.cisco.com/learning/tracks" target="_blank">Learning Tracks</a></li><li><a id="footer-nav-devnet-devnetcreations" data-track-name="Footer-Nav-DevNet-DevNetCreations" data-track-value="https://creations.devnetcloud.com/" href="https://creations.devnetcloud.com/" target="_blank">DevNet Creations</a></li><li><a id="footer-nav-devnet-devnetoverview" data-track-name="Footer-Nav-DevNet-DevNetOverview" data-track-value="https://devnetapps.cisco.com/infographics-mobile-friendly/#/" href="https://devnetapps.cisco.com/infographics-mobile-friendly/#/" target="_blank">DevNet overview</a></li><li><a id="footer-nav-devnet-codeexchange" data-track-name="Footer-Nav-DevNet-CodeExchange" data-track-value="https://developer.cisco.com/codeexchange/" href="https://developer.cisco.com/codeexchange/" target="_blank">Code Exchange</a></li><li><a id="footer-nav-devnet-ecosystemexchange" data-track-name="Footer-Nav-DevNet-EcosystemExchange" data-track-value="https://developer.cisco.com/ecosystem/" href="https://developer.cisco.com/ecosystem/" target="_blank">Ecosystem Exchange</a></li><li><a id="footer-nav-devnet-videocourse" data-track-name="Footer-Nav-DevNet-VideoCourse" data-track-value="https://developer.cisco.com/video/net-prog-basics/" href="https://developer.cisco.com/video/net-prog-basics/" target="_blank">Video course</a></li><li><a id="footer-nav-devnet-videos" data-track-name="Footer-Nav-DevNet-Videos" data-track-value="https://developer.cisco.com/video/" href="https://developer.cisco.com/video/" target="_blank">Videos</a></li></ul></div><div class="dn-footer-nav-col col-xl-2 col-lg-3 col-md-4 col-6"><h6>Support</h6><ul><li><a id="footer-nav-support-knowledgebase" data-track-name="Footer-Nav-Support-KnowledgeBase" data-track-value="https://devnetsupport.cisco.com/hc/en-us/restricted?return_to=https%3A%2F%2Fdevnetsupport.cisco.com%2Fhc%2Fen-us" href="https://devnetsupport.cisco.com/hc/en-us/restricted?return_to=https%3A%2F%2Fdevnetsupport.cisco.com%2Fhc%2Fen-us" target="_blank">Knowledge base</a></li><li><a id="footer-nav-support-contactus" data-track-name="Footer-Nav-Support-ContactUs" data-track-value="/site/contactus/" href="https://developer.cisco.com/site/contactus/">Contact us</a></li><li><a id="footer-nav-support-supportcenter" data-track-name="Footer-Nav-Support-SupportCenter" data-track-value="/site/devnet/support/" href="https://developer.cisco.com/site/devnet/support/">Support center</a></li><li><a id="footer-nav-support-feedback" data-track-name="Footer-Nav-Support-Feedback" data-track-value="/feedback" href="https://developer.cisco.com/feedback">Feedback</a></li></ul></div><div class="dn-footer-nav-col col-xl-2 col-lg-3 col-md-4 col-6"><h6>Technologies</h6><ul><li><a id="footer-nav-technologies-iot" data-track-name="Footer-Nav-Technologies-IoT" data-track-value="/iot/" href="https://developer.cisco.com/iot/">IoT</a></li><li><a id="footer-nav-technologies-cloud" data-track-name="Footer-Nav-Technologies-Cloud" data-track-value="/site/cloud/" href="https://developer.cisco.com/site/cloud/">Cloud</a></li><li><a id="footer-nav-technologies-networking" data-track-name="Footer-Nav-Technologies-Networking" data-track-value="/site/networking/" href="https://developer.cisco.com/site/networking/">Networking</a></li><li><a id="footer-nav-technologies-datacenter" data-track-name="Footer-Nav-Technologies-DataCenter" data-track-value="/site/data-center/" href="https://developer.cisco.com/site/data-center/">Data Center</a></li><li><a id="footer-nav-technologies-security" data-track-name="Footer-Nav-Technologies-Security" data-track-value="/site/security/" href="https://developer.cisco.com/site/security/">Security</a></li><li><a id="footer-nav-technologies-opensource" data-track-name="Footer-Nav-Technologies-OpenSource" data-track-value="/site/opensource/" href="https://developer.cisco.com/site/opensource/">Open Source</a></li><li><a id="footer-nav-technologies-collaboration" data-track-name="Footer-Nav-Technologies-Collaboration" data-track-value="/site/collaboration/" href="https://developer.cisco.com/site/collaboration/">Collaboration</a></li><li><a id="footer-nav-technologies-mobility" data-track-name="Footer-Nav-Technologies-Mobility" data-track-value="/site/mobility/" href="https://developer.cisco.com/site/mobility/">Mobility</a></li></ul></div><div class="dn-footer-nav-col col-xl-2 col-lg-3 col-md-4 col-6"><h6>Cisco resources</h6><ul><li><a id="footer-nav-ciscoresources-cisco.com" data-track-name="Footer-Nav-CiscoResources-Cisco.com" data-track-value="http://www.cisco.com/" href="http://www.cisco.com/" target="_blank">Cisco.com</a></li><li><a id="footer-nav-ciscoresources-solutionpartnerprogram" data-track-name="Footer-Nav-CiscoResources-SolutionPartnerProgram" data-track-value="https://www.cisco.com/c/en/us/partners/partner-with-cisco/solution-partner-program-spp.html" href="https://www.cisco.com/c/en/us/partners/partner-with-cisco/solution-partner-program-spp.html" target="_blank">Solution Partner Program</a></li><li><a id="footer-nav-ciscoresources-marketplace" data-track-name="Footer-Nav-CiscoResources-Marketplace" data-track-value="https://marketplace.cisco.com/catalog" href="https://marketplace.cisco.com/catalog" target="_blank">Marketplace</a></li><li><a id="footer-nav-ciscoresources-ciscosupportcommunity" data-track-name="Footer-Nav-CiscoResources-CiscoSupportCommunity" data-track-value="https://supportforums.cisco.com/" href="https://supportforums.cisco.com/" target="_blank">Cisco Support Community</a></li><li><a id="footer-nav-ciscoresources-ciscomodelinglabs" data-track-name="Footer-Nav-CiscoResources-CiscoModelingLabs" data-track-value="/modeling-labs/" href="https://developer.cisco.com/modeling-labs/">Cisco Modeling Labs</a></li></ul></div><div class="dn-footer-nav-col col-xl-2 col-lg-3 col-md-4 col-6"><h6>Community</h6><ul><li><a id="footer-nav-community-upcomingevents" data-track-name="Footer-Nav-Community-UpcomingEvents" data-track-value="/events/" href="https://developer.cisco.com/events/">Upcoming events</a></li><li><a id="footer-nav-community-chatwithus" data-track-name="Footer-Nav-Community-ChatWithUs" data-track-value="/site/devnet-chat/" href="https://developer.cisco.com/site/devnet-chat/">Chat with us</a></li><li><a id="footer-nav-community-ciscodna" data-track-name="Footer-Nav-Community-CiscoDNA" data-track-value="/site/dna-community/" href="https://developer.cisco.com/site/dna-community/">Cisco DNA</a></li><li><a id="footer-nav-community-diversityandinclusion" data-track-name="Footer-Nav-Community-DiversityAndInclusion" data-track-value="/site/diversity-and-inclusion/" href="https://developer.cisco.com/site/diversity-and-inclusion/">Diversity and inclusion</a></li><li><a id="footer-nav-community-blogs" data-track-name="Footer-Nav-Community-Blogs" data-track-value="https://blogs.cisco.com/developer" href="https://blogs.cisco.com/developer" target="_blank">Blogs</a></li></ul></div><div class="dn-footer-nav-col col-xl-2 col-lg-3 col-md-4 col-6"><h6>Stay connected</h6><ul class="dn-stay-connected"><li><a id="footer-nav-connect-twitter" data-track-name="Footer-Nav-Connect-Twitter" data-track-value="https://twitter.com/ciscodevnet" href="https://twitter.com/ciscodevnet" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a></li><li><a id="footer-nav-connect-facebook" data-track-name="Footer-Nav-Connect-Facebook" data-track-value="https://www.facebook.com/CiscoDevNet" href="https://www.facebook.com/CiscoDevNet" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i><span>Facebook</span></a></li><li><a id="footer-nav-connect-instagram" data-track-name="Footer-Nav-Connect-Instagram" data-track-value="https://www.instagram.com/ciscodevnet/" href="https://www.instagram.com/ciscodevnet/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a></li><li><a id="footer-nav-connect-youtube" data-track-name="Footer-Nav-Connect-YouTube" data-track-value="https://www.youtube.com/channel/UChRmUH4H5hiYzPiFhvNoCIg" href="https://www.youtube.com/channel/UChRmUH4H5hiYzPiFhvNoCIg" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i><span>YouTube</span></a></li><li><a id="footer-nav-connect-github" data-track-name="Footer-Nav-Connect-GitHub" data-track-value="https://github.com/CiscoDevNet" href="https://github.com/CiscoDevNet" target="_blank"><i class="fab fa-github" aria-hidden="true"></i><span>GitHub</span></a></li></ul></div></div></div><div class="dn-footer-nav-chat"><a id="chat-with-us" data-track-name="Chat-With-Us" data-track-value="/site/devnet-chat/" href="https://developer.cisco.com/site/devnet-chat/" target="_blank">Chat with Us!</a></div></div><div class="dn-footer-locale"><div class="container"><div class="row"><div class="col"><div class="logo"></div><div class="language-select"><div class="language-select-icon"></div><div class="language-select-iptbox"><div class="language-text">UNITED STATES (EN)</div><select name="language" id="language" data-track-name="Footer-Language" data-track-value="select"><option value="en" selected="selected">UNITED STATES (EN)</option><option value="zh">中文</option><option value="es">Español</option></select></div></div></div></div></div></div><div class="dn-footer-statement"><div class="container"><div class="row"><div class="col-12 col-lg-8 nav-col"><ul class="dn-footer-statement-nav"><li role="presentation"><a id="footer-statement-terms&amp;conditions" data-track-name="Footer-Statement-Terms&amp;Conditions" data-track-value="/site/license/terms-and-conditions/" href="https://developer.cisco.com/site/license/terms-and-conditions/">Terms &amp; Conditions</a></li><li role="presentation"><a id="footer-statement-privacystatement" data-track-name="Footer-Statement-PrivacyStatement" data-track-value="http://www.cisco.com/web/siteassets/legal/privacy.html" href="http://www.cisco.com/web/siteassets/legal/privacy.html" target="_blank">Privacy Statement</a></li><li role="presentation"><a id="footer-statement-cookiepolicy" data-track-name="Footer-Statement-CookiePolicy" data-track-value="http://www.cisco.com/web/siteassets/legal/privacy.html#cookies" href="http://www.cisco.com/web/siteassets/legal/privacy.html#cookies" target="_blank">Cookie Policy</a></li><li role="presentation"><a id="footer-statement-trademarks" data-track-name="Footer-Statement-Trademarks" data-track-value="http://www.cisco.com/web/siteassets/legal/trademark.html" href="http://www.cisco.com/web/siteassets/legal/trademark.html" target="_blank">Trademarks</a></li><li role="presentation"><a id="footer-statement-reportissue" data-track-name="Footer-Statement-ReportIssue" data-track-value="/site/report-issue" href="https://developer.cisco.com/form/public/360005774414">Report a bug</a></li></ul></div><div class="col-12 col-lg-4 copyright-col"><div class="copyright">© Copyright 2022 Cisco DevNet</div></div></div></div></div></div></div></div></div>
+    
+    <script async="" src="index_files/analytics.js"></script><script>
+        window['SITE_PROTECTED'] = false;
+        window['PREVIEW_PUBHUB_PROJECT'] = false;
+        window['DEVNET_NO_AUTO_TRACKING'] = true;
+        window['PUBHUB_CONTENT_URL'] = "https://pubhub.devnetcloud.com/media/";
+        window['PROTECT_BUCKET_URL'] = "https://devnet-pages-download.s3.amazonaws.com";
+        window['PUBHUB_URL_PREFIX'] = "/site";
+        window['PUBHUB_TYPE'] = "site";
+        window['ETTAPI'] = "https://devnet-ett.cisco.com/";
+        window['DEVNET_MAIL_LIST'] = "devnetcloudytest@googlegroups.com";
+        window['API_HOST'] = "https://devnet.cisco.com/";
+        window['SEARCH_API'] = "/v1/metadata/";
+        window['MetaDataAPI'] = "https://devnet.cisco.com/v1/metadata/";
+        window['REPORT_ISSUE_URL'] = "https://devnet.cisco.com/v1/issues/";
+        window['MAIL_URL'] = "https://devnet.cisco.com/v1/mail/";
+        window['newsletterURL'] = "https://devnet.cisco.com/v1/subscribers/269cae8744";
+        window['sparkURL'] = "https://devnet.cisco.com/v1/sparkmessage/memberships/";
+        window['EVENT_SERVICE_URL'] = "https://devnet.cisco.com/v1/events/";
+        window['PROTECT_SERVICE_URL'] = "https://devnet.cisco.com/v1/presigned/";
+        window['FILE_SERVICE_URL'] = "https://devnet.cisco.com/v1/uploadfile";
+        window['TERM_SERVICE_URL'] = "https://devnet.cisco.com/v1/terms/";
+        window['UPM_URL'] = "https://devnet.cisco.com/api/v1.0.0/";
+        window['AUTH_URL'] = "https://auth-devnet.cisco.com/v1/auth/";
+        window['PROFILE_UI_JS'] = "https://d1yxfb2eunitaq.cloudfront.net/profileui/profile-bundle.js";
+        window['PROFILE_UI_CSS'] = "https://d1yxfb2eunitaq.cloudfront.net/profileui/profile-bundle.css";
+        window['PROFILE_UI_ASSET'] = "https://d1yxfb2eunitaq.cloudfront.net/profileui";
+        window['LEARNING_LAB_URL'] = "https://learninglabs.cisco.com";
+        window['QUOTA_SEARCH_URL'] = "https://devnet.cisco.com/v1/companies/search?domains=";
+        window['NEW_MENU'] = "https://pubhub.devnetcloud.com/media/new-announcement/site";
+        
+    </script>
+
+    <script src="index_files/optimize.js" defer="defer"></script>
+    
+    <script src="index_files/jquery.js" defer="defer"></script>
+    <script src="index_files/pubhub.js" defer="defer"></script>
+    <script src="index_files/project_list.js" defer="defer"></script>
+    
+    <script src="index_files/index_003.js" defer="defer"></script>
+    <script src="index_files/sdk_002.js" defer="defer"></script>
+    <script src="index_files/analytics_002.js" defer="defer"></script>
+    <script src="index_files/sdk.js" defer="defer"></script>
+    <script src="index_files/app.js" defer="defer"></script>
+    <script src="index_files/index_002.js" defer="defer"></script>
+    
+    
+
+
+<div id="ghostery-tracker-tally" class="ghostery-bottom ghostery-right ghostery-collapsed"><div id="ghostery-box"><div id="ghostery-count" style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255);">4</div><div id="ghostery-pb-icons-container"><span id="ghostery-breaking-tracker" class="ghostery-pb-tracker" title="Broken Page Trackers" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPmJyZWFraW5ncGFnZTwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQxNi4wMDAwMDAsIC00NTMuMDAwMDAwKSIgaWQ9ImJhbSEtYnJlYWtpbmctdGhlLXBhZ2UtY29weS0yIiBmaWxsPSIjRkNCQTMzIj4NCiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQxNi4wMDAwMDAsIDQ1My4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwwLjE5NTY1MjE3NCBDNC4xNDQzNjAyNSwwLjE5NTY1MjE3NCAwLjE5NTY1MjE3NCw0LjE0NDM2MDI1IDAuMTk1NjUyMTc0LDkgQzAuMTk1NjUyMTc0LDEzLjg1NTYzOTggNC4xNDQzNjAyNSwxNy44MDQzNDc4IDksMTcuODA0MzQ3OCBDMTMuODU1NjM5OCwxNy44MDQzNDc4IDE3LjgwNDM0NzgsMTMuODU1NjM5OCAxNy44MDQzNDc4LDkgQzE3LjgwNDM0NzgsNC4xNDQzNjAyNSAxMy44NTU2Mzk4LDAuMTk1NjUyMTc0IDksMC4xOTU2NTIxNzQgWiBNMTEuNDg1NTg5OSwxMy40MTA0NDQxIEwxMS4wNzcwNzk4LDEzLjAyMDY3NjggTDEyLjEwMDQ3MTEsMTIuMjE2OTU3OSBMMTEuMDQ2MjQ1MSwxMi4yMTY5NTc5IEwxMS4yMzQ0NzgxLDEwLjg3MDcwODcgTDkuODAzMTgxNDIsMTEuNzk1NzUxMiBMOS40MDMzMzczNCw5LjM0NTA5MzkyIEw4LjY5NDc0MjY5LDExLjA4NjU1MTkgTDcuMzI1NzIwMDksMTAuMTcwOTgxNSBMNy43NTI1Njk3NywxMS45Mjk1NyBMNi41NTQyNDY3MywxMi4zMTE0Nzc1IEw3Ljg4MjM1Nzg3LDEzLjQxMDQ0NDEgTDExLjQ4NTU4OTksMTMuNDEwNDQ0MSBaIE02LjcxNTY3NTcyLDEzLjQxMDQ0NDEgTDUuMDI4NjMxOTcsMTIuMDA2NzU3NiBMNi44Njg0Mzg3MywxMS40MzE5ODE4IEw2LjE2Mzg3NDc3LDguNDg4NTczMDkgTDguMzQ5MzEyODgsOS45NTk5NzUxMiBMOS43MDQwMjY1NCw2LjYxMjQ5MDE1IEwxMC4zNTAzNDcxLDEwLjU1NjcxODIgTDEyLjE5NDk5MDcsOS4zNzY1MzMyOCBMMTEuODk4OTM2OCwxMS40NzY5MjM5IEwxNC4yNjI5MzQzLDExLjQ3NjkyMzkgTDEyLjIxMjkyNzIsMTMuMDc4OTIwMiBMMTIuNTY3MjI0NSwxMy40MTA0NDQxIEwxNS4zMzEyNjc3LDEzLjQxMDQ0NDEgTDE0LjQ3Mzk0MDcsMTIuNTk4NjYzOSBMMTcuMjA3MzUwNiwxMC40NjY4MzM5IEwxMy4wNjA3ODIxLDEwLjQ2NjgzMzkgTDEzLjQ5NjI5NzcsNy4zNDg2OTUgTDExLjA5OTg1MzIsOC44Nzg5NDUwNSBMMTAuMTIxMjAyNiwyLjg5Mjc3MTMgTDcuODc3NzIyNTgsOC40MjU0OTI4NSBMNC41NzA1NDQ0Nyw2LjIwMzk4MDEgTDUuNjY1NDgwNDEsMTAuNzUwMzkyNyBMMi45NTEwMTQ3MiwxMS41OTgyNDc2IEw1LjEzNjQ1MjgzLDEzLjQxMDQ0NDEgTDYuNzE1Njc1NzIsMTMuNDEwNDQ0MSBaIiBpZD0iYnJlYWtpbmdwYWdlIj48L3BhdGg+DQogICAgICAgICAgICA8L2c+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=&quot;) repeat scroll 0% 0%; opacity: 0.5;"></span><span id="ghostery-slow-tracker" class="ghostery-pb-tracker" title="Slow Trackers" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxN3B4IiBoZWlnaHQ9IjE3cHgiIHZpZXdCb3g9IjAgMCAxNyAxNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPnNsb3d0cmFja2VyczwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM5NS4wMDAwMDAsIC00NTQuMDAwMDAwKSIgaWQ9InNsb3d0cmFja2VycyIgZmlsbD0iI0ZDQkEzMyI+DQogICAgICAgICAgICA8cGF0aCBkPSJNNDAzLjUsNDU0IEMzOTguODEyMjEsNDU0IDM5NSw0NTcuODEyMjEgMzk1LDQ2Mi41IEMzOTUsNDY3LjE4Nzc5IDM5OC44MTIyMSw0NzEgNDAzLjUsNDcxIEM0MDguMTg3NzksNDcxIDQxMiw0NjcuMTg3NzkgNDEyLDQ2Mi41IEM0MTIsNDU3LjgxMjIxIDQwOC4xODc3OSw0NTQgNDAzLjUsNDU0IFogTTQwOS42MDk1ODQsNDY1LjE3ODY1NCBDNDA5LjUzMDI1OSw0NjUuMTU0MDkgNDA4LjY3NzI4Myw0NjQuNzQ2NDIgNDA3LjU2MTA5MSw0NjQuMzYyNjM3IEM0MDguNDg0Mzc4LDQ2My43NDU2MSA0MDkuMDk0NDE4LDQ2Mi42OTM2NDUgNDA5LjA5NDQxOCw0NjEuNTAxNzMzIEM0MDkuMDk0NDE4LDQ1OS42MDU1ODEgNDA3LjU1MTQwMSw0NTguMDYyMzM4IDQwNS42NTUyNDksNDU4LjA2MjMzOCBDNDAzLjc1OTA5Nyw0NTguMDYyMzM4IDQwMi4yMTU4NTQsNDU5LjYwNTU4MSA0MDIuMjE1ODU0LDQ2MS41MDE3MzMgQzQwMi4yMTU4NTQsNDYyLjA0OTM1IDQwMi4zNDUyMDgsNDYyLjU2Njc2OSA0MDIuNTczMjY5LDQ2My4wMjY0OTcgQzQwMi43ODgwMzQsNDYzLjA2ODYzOCA0MDMuMzQ0NDQsNDYzLjE3NTIzMiA0MDQuMjIzNzgyLDQ2My4zMjM5NjggQzQwNS4yMDQ1MzUsNDYzLjQ5MDI4MSA0MDUuODUyNDM2LDQ2My4zNTY0MTkgNDA2LjM5MTAzOSw0NjIuODc2NjM0IEM0MDYuNzI4MTcyLDQ2Mi41NzY0NTkgNDA2LjkyODA2NCw0NjIuMTYzNjA2IDQwNi45NTM1MjksNDYxLjcxMzc5NCBDNDA2Ljk4MDEyMSw0NjEuMjYzOTgxIDQwNi44Mjk1ODMsNDYwLjgyOTk0NCA0MDYuNTI5NDA4LDQ2MC40OTM3MTIgQzQwNi4wNDY5MTksNDU5Ljk1MjQwNSA0MDUuMjE1MTI3LDQ1OS45MDM5NTMgNDA0LjY3MjY5Myw0NjAuMzg1NTQxIEM0MDQuMjM5NTU3LDQ2MC43NzExMjYgNDA0LjE4NTAyMSw0NjEuNDQ0NDkyIDQwNC41NTIxMjcsNDYxLjg1NzM0NiBDNDA0Ljg0MDEzMyw0NjIuMTgwNTA3IDQwNS4zNjk5NDcsNDYyLjIxNzQ2NiA0MDUuNjg2Nzk5LDQ2MS45MzU3NyBDNDA1LjgwMzk4NCw0NjEuODMxODggNDA1Ljg3MzM5NCw0NjEuNjkyODM1IDQwNS44ODA2MDYsNDYxLjU0NDc3NiBDNDA1Ljg4NjY5LDQ2MS40MjQyMSA0MDUuODUwNjMzLDQ2MS4zMTA2MyA0MDUuNzgwOTk4LDQ2MS4yMzQwMDkgQzQwNS43MTg1NzQsNDYxLjE2NTUgNDA1LjYxOTE5Miw0NjEuMTI3NjQxIDQwNS41MTY4OCw0NjEuMTI4NTQyIEM0MDUuNDI5ODkyLDQ2MS4xMzEwMjEgNDA1LjMxNzIxNCw0NjEuMTY1NSA0MDUuMjQ0MTk4LDQ2MS4yMzc2MTUgQzQwNS4yMjYzOTUsNDYxLjI1NDI5MSA0MDUuMjA0NTM1LDQ2MS4yNjQ4ODMgNDA1LjE3OTc0Niw0NjEuMjY0ODgzIEM0MDUuMTI2MTExLDQ2MS4yNjQ4ODMgNDA1LjA4MzA2OCw0NjEuMjE2NDMxIDQwNS4wODMwNjgsNDYxLjE1NzYxMyBDNDA1LjA4MzA2OCw0NjEuMTIxMzMxIDQwNS4wOTc5NDEsNDYxLjA5NDk2NCA0MDUuMTE2NDIxLDQ2MS4wNjk0OTggQzQwNS4yMjYzOTUsNDYwLjkxODk2IDQwNS4zODE0NCw0NjAuODMxNzQ3IDQwNS41MzUzNTksNDYwLjgxODY3NiBDNDA1Ljc0NDAzOSw0NjAuODAxMDk5IDQwNS45MTMwNTcsNDYwLjg2MDgxOCA0MDYuMDQ2OTE5LDQ2MS4wMDc3NTEgQzQwNi4xNzk4NzksNDYxLjE1NDAwNyA0MDYuMjQ5Mjg5LDQ2MS4zNDg0OSA0MDYuMjM3MTIsNDYxLjU2MzI1NSBDNDA2LjIyMzgyNCw0NjEuODA2MTkgNDA2LjExMjk0OCw0NjIuMDMyNDQ4IDQwNS45MjM2NDksNDYyLjIwMDU2NCBDNDA1LjQ1NzE2LDQ2Mi42MTYxMjIgNDA0LjcwNzE3Myw0NjIuNTY2MDkzIDQwNC4yODU1Myw0NjIuMDkzMjk0IEM0MDMuNzg5NzQ1LDQ2MS41MzU5ODcgNDAzLjg1ODQ3OSw0NjAuNjMyMDgxIDQwNC40MzUxNjcsNDYwLjExNzgxNyBDNDA1LjEyMzQwNyw0NTkuNTA1Mjk3IDQwNi4xODI1ODQsNDU5LjU2NjgyIDQwNi43OTQyMDIsNDYwLjI1NTI4NCBDNDA3LjE1NzAyNiw0NjAuNjYyNzMgNDA3LjM0MDAxNiw0NjEuMTg4MjYyIDQwNy4zMDg0NjYsNDYxLjczMzE3NCBDNDA3LjI3NjY5MSw0NjIuMjc4OTg4IDQwNy4wMzQ2NTgsNDYyLjc3OTA1NSA0MDYuNjI2OTg3LDQ2My4xNDE2NTQgQzQwNi4xNjgzODYsNDYzLjU1MDIyNiA0MDUuNjMyMjYyLDQ2My43NDY1MTIgNDA0Ljk0NjUwMiw0NjMuNzQ2NTEyIEM0MDQuNzA1MzcsNDYzLjc0NjUxMiA0MDQuNDQ0ODU3LDQ2My43MjE3MjIgNDA0LjE2MzE2Miw0NjMuNjc0Mzk3IEM0MDMuMTkyMDk5LDQ2My41MDk2NjIgNDAyLjE1NTAwNyw0NjMuMzI0ODY5IDQwMi4wMTU5NjIsNDYzLjMwNTQ4OCBDNDAxLjMxNzEzMSw0NjMuMjEyMTkxIDQwMC43MzYxNjEsNDYyLjczNzU4OSA0MDAuNzE3NjgyLDQ2Mi4wMzk2NTkgTDQwMC44OTQ1ODcsNDU4Ljk4NzY1MyBDNDAwLjg5NDU4Nyw0NTguNzkxMzY3IDQwMC43MzUyNiw0NTguNjMxMTM4IDQwMC41MzgwNzIsNDU4LjYzMTEzOCBDNDAwLjM0MDg4NSw0NTguNjMxMTM4IDQwMC4xODE1NTgsNDU4Ljc5MDQ2NSA0MDAuMTgxNTU4LDQ1OC45ODc2NTMgQzQwMC4xODE1NTgsNDU4Ljk4NzY1MyA0MDAuMjg1NDQ3LDQ2MC44NDE0MzcgNDAwLjI5NzYxNyw0NjEuMDc1NTgzIEM0MDAuMzIwNjAzLDQ2MS41MjAyMTIgMzk5LjkxMTEzLDQ2MS44NzY3MjYgMzk5LjQ2MDQxNiw0NjEuODc2NzI2IEMzOTguOTk4NDM1LDQ2MS44NzY3MjYgMzk4LjU4NzE1OSw0NjEuNTAwODMxIDM5OC42MjM0NDEsNDYxLjAzOTUyNiBDMzk4LjY0MzQ5OCw0NjAuNzg0MTk3IDM5OC42NjQ2ODIsNDYwLjUyMDA3OSAzOTguNjg1ODY1LDQ2MC4yNzI4NjIgTDM5OC43NTk3ODIsNDU5LjAwOTUxMiBDMzk4Ljc1OTc4Miw0NTguODEzMjI2IDM5OC42MDA0NTUsNDU4LjY1Mjk5OCAzOTguNDAzMjY4LDQ1OC42NTI5OTggQzM5OC4yMDYwOCw0NTguNjUyOTk4IDM5OC4wNDY3NTMsNDU4LjgxMjMyNSAzOTguMDQ2NzUzLDQ1OS4wMDk1MTIgTDM5OC4yMjAyNzgsNDYxLjk5OTk5NyBMMzk4LjIyMDI3OCw0NjIuMDA1MTggQzM5OC4yMjAyNzgsNDY0LjA5NzYxNyAzOTkuNDE3MzczLDQ2NS44MDI4OTIgNDAxLjUxMDcxMiw0NjUuODAxMDg5IEM0MDMuNjIyNTMxLDQ2NS43OTgzODUgNDA5LjYwODY4Myw0NjUuODAxMDg5IDQwOS42MDg2ODMsNDY1LjgwMTA4OSBDNDA5Ljc4MTA4MSw0NjUuODAxMDg5IDQwOS45MjAzNTEsNDY1LjY2MTE0MyA0MDkuOTIwMzUxLDQ2NS40ODk0MjEgQzQwOS45MjAzNTEsNDY1LjMxNzAyMyA0MDkuNzczMTkzLDQ2NS4yMzA3MTEgNDA5LjYwOTU4NCw0NjUuMTc4NjU0IFoiPjwvcGF0aD4NCiAgICAgICAgPC9nPg0KICAgIDwvZz4NCjwvc3ZnPg==&quot;) repeat scroll 0% 0%; opacity: 0.5;"></span><span id="ghostery-non-secure-tracker" class="ghostery-pb-tracker" title="Non-secure Trackers" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPndhcm5pbmc8L3RpdGxlPg0KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPg0KICAgIDxkZWZzPjwvZGVmcz4NCiAgICA8ZyBpZD0iUHVycGxlLUJveCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+DQogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNzMuMDAwMDAwLCAtNDUzLjAwMDAwMCkiIGlkPSJ3YXJuaW5nIiBmaWxsPSIjRkVCMDMyIj4NCiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3My4wMDAwMDAsIDQ1My4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwwLjYzMDQzNDc4MyBDNC4zODQxNDQ5MywwLjYzMDQzNDc4MyAwLjYzMDQzNDc4Myw0LjM4NDE0NDkzIDAuNjMwNDM0NzgzLDkgQzAuNjMwNDM0NzgzLDEzLjYxNTg1NTEgNC4zODQxNDQ5MywxNy4zNjk1NjUyIDksMTcuMzY5NTY1MiBDMTMuNjE1ODU1MSwxNy4zNjk1NjUyIDE3LjM2OTU2NTIsMTMuNjE1ODU1MSAxNy4zNjk1NjUyLDkgQzE3LjM2OTU2NTIsNC4zODQxNDQ5MyAxMy42MTU4NTUxLDAuNjMwNDM0NzgzIDksMC42MzA0MzQ3ODMgWiBNNC42NDI5MjgxMSwxMS43ODk4NTUxIEM1LjI1MDQxMTY1LDExLjc4OTg1NTEgNS43NTY5NTIzNCwxMS4zNjA3NTY3IDUuODc4NzE2OTMsMTAuODgxMzY5NSBDNi4wMDA0ODE1MiwxMS4zNjEyNDM3IDYuNTA3MDIyMjIsMTEuNzIzNzM2OSA3LjExNDM4NCwxMS43MjM3MzY5IEM3LjcyNDE4MTA2LDExLjcyMzczNjkgOC4yMzI2Njk5OSwxMS4zNjUwMTg0IDguMzUxNTEyMjMsMTAuODgyNzA4OSBDOC40NzA5NjMzLDExLjM2NTAxODQgOC45Nzk0NTIyMywxMS43MzY1MjIyIDkuNTg4NzYyMjQsMTEuNzM2NTIyMiBDMTAuMTk0NjYyOCwxMS43MzY1MjIyIDEwLjcwMTIwMzUsMTEuMzk0OTcyNSAxMC44MjM0NTUyLDEwLjkxNjU1OTQgQzEwLjk0NTcwNjgsMTEuMzk0OTcyNSAxMS40NTIyNDc1LDExLjc4OTM2OCAxMi4wNTgyNjk5LDExLjc4OTM2OCBDMTIuMzUzNjcwOCwxMS43ODkzNjggMTIuNjI0NzE4OCwxMS42OTkzODQgMTIuODM5NzU1LDExLjU1OTU5ODIgQzExLjAwOTUxMTUsOC43MTgwOTk3NSAxMi4xNDUzMzE2LDQuMTM3NjgxMTYgMTIuMTQ1MzMxNiw0LjEzNzY4MTE2IEM2Ljk0NjQ3MDYzLDUuMjMxNjE0MjQgNC42NjU4MTk4NSwxMC4xMDAzNzE0IDQuMDU3OTcxMDEsMTEuNjY2MTQyMiBDNC4yMzI5NDY3MywxMS43NDMyMTkyIDQuNDMxNzg4MzEsMTEuNzg5ODU1MSA0LjY0MjkyODExLDExLjc4OTg1NTEgWiIgaWQ9Indhcm5pbmd0cmFja2VycyI+PC9wYXRoPg0KICAgICAgICAgICAgPC9nPg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+&quot;) repeat scroll 0% 0%; opacity: 0.5;"></span></div><div id="ghostery-title">Trackers</div><div id="ghostery-minimize"><span id="ghostery-minimize-icon"></span></div><span id="ghostery-close" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxNXB4IiBoZWlnaHQ9IjE1cHgiIHZpZXdCb3g9IjAgMCAxNSAxNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDMuNy4yICgyODI3NikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPmNvbGxhcHNlIGNvcHkgMjwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgaWQ9ImNvbGxhcHNlLWNvcHktMiI+DQogICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsLTMxNSIgZmlsbC1vcGFjaXR5PSIwLjI3MDE1Mzk4NiIgZmlsbD0iI0Q4RDhEOCIgY3g9IjcuNSIgY3k9IjcuNSIgcj0iNy41Ij48L2NpcmNsZT4NCiAgICAgICAgICAgIDxwYXRoIGQ9Ik00LjM2LDQuMzYgTDEwLjU3NDU2MzQsMTAuNTc0NTYzNCIgaWQ9IkxpbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSI+PC9wYXRoPg0KICAgICAgICAgICAgPHBhdGggZD0iTTQuMzYsNC4zNiBMMTAuNTc0NTYzNCwxMC41NzQ1NjM0IiBpZD0iTGluZS1Db3B5IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcuNjAwMDAwLCA3LjYwMDAwMCkgc2NhbGUoLTEsIDEpIHRyYW5zbGF0ZSgtNy42MDAwMDAsIC03LjYwMDAwMCkgIj48L3BhdGg+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=&quot;) repeat scroll 0% 0%;"></span></div><div id="ghostery-pb-background"><div id="ghostery-trackerList"><div class="ghostery-trackerContainer ghostery-tracker-disabled" category="site_analytics"><span id="ghostery-no-tracker" class="ghostery-pb-tracker-list"></span><span class="ghostery-tracker">Google Analytics</span></div><div class="ghostery-trackerContainer ghostery-tracker-disabled" category="advertising"><span id="ghostery-no-tracker" class="ghostery-pb-tracker-list"></span><span class="ghostery-tracker">Marketo</span></div><div class="ghostery-trackerContainer" category="social_media"><span id="ghostery-no-tracker" class="ghostery-pb-tracker-list"></span><span class="ghostery-tracker">Twitter Button</span></div><div class="ghostery-trackerContainer" category="social_media"><span id="ghostery-no-tracker" class="ghostery-pb-tracker-list"></span><span class="ghostery-tracker">Twitter Syndication</span></div></div></div></div><script id="google_map_api" defer="defer" async="" src="index_files/js"></script><iframe scrolling="no" allowtransparency="true" src="index_files/widget_iframe.html" title="Twitter settings iframe" style="display: none;" frameborder="0"></iframe><iframe id="rufous-sandbox" scrolling="no" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" title="Twitter analytics iframe" frameborder="0"></iframe></body></html>

@@ -1,15 +1,25 @@
 {
-    "resources": {
-        "profile": "exclusive",
-        "disk": "100",
+    "resources":
+    {
+        "profile": "custom",
+        "cpu": "700",
+        "memory": "750",
+        "disk": "200",
         "network": [{
-            "interface-name": "eth0",
-            "network-name": "iox-nat0",
-            "port_map": {
-                "mode": "auto",
-                "tcp": {
-                    "8080": "8080"
-                }
+            "ipv4": {
+                "ip": "192.168.10.66",
+                "prefix": "24",
+                "gateway": "192.168.10.1",
+                "dns": "10.17.248.11",
+                "default": true
+            },
+            "interface-name": "eth0", 
+            "network-name": "iox-nat0", 
+            "port_map":{
+                "mode": "auto"
+            },
+            "tcp": {
+                "8080": "8080"
             }
         }]
     }
