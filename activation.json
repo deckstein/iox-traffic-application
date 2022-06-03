@@ -6,13 +6,6 @@
         "memory": "750",
         "disk": "200",
         "network": [{
-            "ipv4": {
-                "ip": "192.168.10.66",
-                "prefix": "24",
-                "gateway": "192.168.10.1",
-                "dns": "10.17.248.11",
-                "default": true
-            },
             "interface-name": "eth0", 
             "network-name": "iox-nat0", 
             "port_map":{

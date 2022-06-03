@@ -10,7 +10,6 @@ COPY captureTraffic_createVisuals.py /captureTraffic_createVisuals.py
 COPY causeTraffic.py /causeTraffic.py
 COPY start.sh /start.sh
 COPY index.html /index.html
-COPY webpages/ /webpages/
 
 RUN chmod 755 /start.sh
 
