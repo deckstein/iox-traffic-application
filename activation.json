@@ -1,10 +1,7 @@
 {
     "resources":
     {
-        "profile": "custom",
-        "cpu": "700",
-        "memory": "750",
-        "disk": "200",
+        "profile": "exclusive",
         "network": [{
             "interface-name": "eth0", 
             "network-name": "iox-nat0", 
